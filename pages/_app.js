@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import './main.css';
 import Script from 'next/script'
 import Head from "next/head";
-import Footer from "../components/footer";
+
 
 const App = ({ Component, pageProps }) => {
 
@@ -18,7 +18,6 @@ const App = ({ Component, pageProps }) => {
       </Head>
       <div className="wrapper">
         <Component {...pageProps} />
-      <Footer />
       </div>
       </>
 

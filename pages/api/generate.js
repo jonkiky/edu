@@ -31,7 +31,7 @@ const response = await openai.chat.completions.create({
       "content": req.body.user
     }
       ],
-  temperature: 1,
+  temperature: 0,
   max_tokens: 3007,
   top_p: 1,
   frequency_penalty: 0,
