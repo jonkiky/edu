@@ -21,7 +21,7 @@ export default function Search() {
     
     if(searchTerm!== ""){
     	
-    	router.push('/content/'+searchTerm);
+    	router.push('./content/'+searchTerm);
     }
   };
 
