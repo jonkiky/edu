@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "myFunction": {
+      "handler": "generate.js",
+      "timeout": 120 // Increase the timeout to 30 seconds (default is 10 seconds)
+    }
+  }
+}
