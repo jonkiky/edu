@@ -2,9 +2,9 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react';
 import { InfinitySpin } from 'react-loader-spinner';
 import Link from 'next/link';
-import Footer from "../../components/footer";
-import Section from "../../components/section";
-import QueryBuilder from "../questions";
+import Footer from "../components/footer";
+import Section from "../components/section";
+import QueryBuilder from "./questions";
 
 export default function page() {
 
@@ -27,11 +27,7 @@ const [searchTerm, setSearchTerm] = useState("");
   };
 
 
-  const sport = router.query?.slug?.toUpperCase();
-
-	if(sport==""){
-  	router.push('/404');
-  }
+  const sport = "golf"
 
   const queries = QueryBuilder(sport);
 

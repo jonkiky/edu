@@ -30,10 +30,11 @@ export default function Search() {
   		let list = []
 		  for (var i = cate.length - 1; i >= 0; i--) {
 		  		let hrefLink = "/content/"+cate[i].name;
+		  		let img = cate[i].image === "n/a" ? "images/pic01.jpg":cate[i].image;
 		  		list.push(
 		  				<article className="style1">
 											<span className="image">
-												<img src="images/pic01.jpg" alt="" />
+												<img src={img} alt="" />
 											</span>
 											<a href={hrefLink} >
 												<h2>{cate[i].name}</h2>
@@ -55,7 +56,7 @@ export default function Search() {
 
 				 	<header>
 						 	<div id="search-logo">
-						 	<Link href="/">
+						 	<Link href="/explore">
 								  <h2>Explore</h2>
 								</Link>
 						 	</div>
