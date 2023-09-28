@@ -1,147 +1,302 @@
-export const cate = [
+export const data = [
+   {
+      "name": "FIGURE SKATING",
+      "image": "images/FIGURE_SKATING.png",
+      "desc":"",
+      "tags":["age-6","age-7","age-8","age-9","age-10","s-spring","s-summer","s-fall","c-$",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-intrapersonal","olympics"]
+   },
+   {
+      "name": "Archery",
+      "image": "images/Archery.png",
+      "desc":"",
+      "tags":["age-6","age-7","age-8","age-9","age-10","s-spring","s-summer","s-fall","c-$",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-intrapersonal","olympics"]
+   },
+   {
+      "name": "Fancy Diving",
+      "image": "images/fancy_diving.png",
+      "desc":"",
+      "tags":["age-6","age-7","age-8","age-9","age-10","s-spring","s-summer","s-fall","c-$",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-intrapersonal","olympics"]
+   },
+   {
+      "name": "Diving",
+      "image": "images/diving.png",
+      "desc":"",
+      "tags":["age-10","s-spring","s-summer","s-fall","c-$",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-intrapersonal"]
+   },
+   {
+      "name": "Flag Football",
+      "image": "images/flag-football.png",
+      "desc":"",
+      "tags":["age-5","age-6","age-7","age-8","age-9","age-10","s-spring","s-summer","s-fall","c-$",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-intrapersonal"]
+   },
    {
       "name": "Racing car",
       "image": "images/kenny-leys-JAD82NI3l2Y-unsplash.jpg",
-      "desc":"Racing car activities feature high-speed competitions with various vehicles, from Formula 1 to off-road racing, providing thrilling experiences for enthusiasts and drivers."
+      "desc":"",
+      "tags":["age-6","age-7","age-8","age-9","age-10","s-spring","s-summer","s-fall","c-$$$",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","new"]
    },
    {
       "name": "Football",
       "image": "images/muyuan-ma--xHZBzv4Naw-unsplash.jpg",
-      "desc": "Football is a team sport played with an oval-shaped ball. Teams aim to score by carrying the ball into the opposing team's end zone or kicking it through the goalposts. It's known for its physicality and strategic gameplay."
+      "desc":"",
+      "tags":["age-5","age-6","age-7","age-8","age-9","age-10","s-spring","s-summer","s-fall",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","c-$"]
    },
    {
       "name": "Basketball",
       "image": "images/markus-spiske-oXS1f0uZYV4-unsplash.jpg",
-      "desc": "Basketball is a fast-paced sport played with a round ball. Teams aim to score by shooting the ball through the opposing team's hoop. It involves dribbling, passing, and teamwork."
+      "desc":"",
+      "tags":["age-5","age-6","age-7","age-8","age-9","age-10","s-spring","s-summer","s-fall",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","c-$"]
    },
    {
       "name": "Baseball",
       "image": "images/diana-polekhina-w1sYdquxs-I-unsplash.jpg",
-      "desc": "Baseball is a bat-and-ball sport where players aim to score by hitting a pitched ball and running around bases. It's known for its precision and strategy."
+      "desc":"",
+      "tags":["age-5","age-6","age-7","age-8","age-9","age-10","s-spring","s-summer","s-fall",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","c-$"]
    },
    {
       "name": "Softball",
       "image": "images/eduardo-balderas-UVxd5b-_tw8-unsplash.jpg",
-      "desc": "Softball is similar to baseball but played with a larger ball on a smaller field. It involves pitching, hitting, and fielding, emphasizing both skill and teamwork."
+      "desc":"",
+      "tags":["age-5","age-6","age-7","age-8","age-9","age-10","s-spring","s-summer","s-fall",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","c-$"]
    },
    {
       "name": "Soccer",
       "image": "images/debra-brewster-AvGIpReokFM-unsplash.jpg",
-      "desc": "Soccer, also known as football in many parts of the world, is a team sport played with a spherical ball. Teams aim to score by kicking the ball into the opposing team's goal. It's known for its endurance and skill."
+      "desc":"",
+      "tags":["age-5","age-6","age-7","age-8","age-9","age-10","s-spring","s-summer","s-fall",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","c-$"]
    },
    {
       "name": "Volleyball",
       "image": "images/vince-fleming-aZVpxRydiJk-unsplash.jpg",
-      "desc": "Volleyball is a team sport played on a rectangular court with a net. Teams aim to score by sending the ball over the net and into the opponent's court. It requires precise passing, setting, and spiking."
+      "desc":"",
+      "tags":["age-8","age-9","age-10","s-spring","s-summer","s-fall",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","c-$"]
    },
    {
       "name": "Wrestling",
       "image": "images/chris-chow-TxxSLvOvfCk-unsplash.jpg",
-      "desc": "Wrestling is a combat sport where competitors aim to control and pin their opponents. It involves grappling techniques and strength."
+      "desc":"",
+      "tags":["age-6","age-7","age-8","age-9","age-10","s-spring","s-summer","s-fall","s-winter",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","c-$"]
    },
    {
       "name": "Cross Country",
       "image": "images/omar-tursic-vEoD8Jg80Ck-unsplash.jpg",
-      "desc": "Cross country is a long-distance running sport where athletes race over natural terrain. It tests endurance and stamina as runners traverse challenging courses."
+      "desc":"",
+      "tags":["age-8","age-9","age-10","s-fall",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","c-$"]
    },
    {
       "name": "Track and Field",
       "image": "images/jonathan-chng-3R4vPrSB1c4-unsplash.jpg",
-      "desc": "Track and field includes various athletic events such as running, jumping, and throwing. Athletes compete in races, long jumps, high jumps, shot put, and more."
+      "desc":"",
+      "tags":["age-6","age-7","age-8","age-9","age-10","s-spring","s-summer",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","c-$"]
    },
    {
       "name": "Swimming and Diving",
       "image": "images/melinda-martin-zYeIxH9k5CI-unsplash.jpg",
-      "desc": "Swimming involves racing in water using various strokes, while diving focuses on performing acrobatic maneuvers from diving boards. Both sports require skill and precision in the water."
+      "desc":"",
+      "tags":["s-summer","age-4","age-5","age-6","age-7","age-8","age-9","age-10",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","c-$"]
    },
    {
       "name": "Golf",
       "image": "images/golf.jpg",
-      "desc": "Golf is an individual sport played on a golf course. Players aim to complete the course in as few strokes as possible by hitting a ball into a series of holes. It requires both skill and strategy."
+      "desc":"",
+      "tags":["age-5","age-6","age-7","age-8","age-9","age-10","s-spring","s-summer","s-fall",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","c-$$"]
    },
    {
       "name": "Tennis",
       "image": "images/darko-nesic-VZEnVM6c1lY-unsplash.jpg",
-      "desc": "Tennis is a racket sport played on a rectangular court divided by a net. Players aim to score points by hitting the ball over the net and into the opponent's court. It involves agility and precision."
+      "desc":"",
+      "tags":["age-4","age-5","age-6","age-7","age-8","age-9","age-10","s-spring","s-summer","s-fall",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","c-$"]
    },
    {
       "name": "Lacrosse",
       "image": "images/jeffrey-f-lin-YYQ1ARvhfCo-unsplash.jpg",
-      "desc": "Lacrosse is a team sport played with a small rubber ball and a long-handled stick. Teams aim to score by shooting the ball into the opposing team's goal. It combines physicality and finesse."
+      "desc":"",
+      "tags":["age-6","age-7","age-8","age-9","age-10","s-spring","s-fall",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","c-$"]
    },
    {
       "name": "Field Hockey",
       "image": "images/john-torcasio-oeGMaLjUOxQ-unsplash.jpg",
-      "desc": "Field hockey is a team sport played with a ball and curved sticks. Teams aim to score by hitting the ball into the opposing team's goal. It involves skillful dribbling and passing."
+      "desc":"",
+      "tags":["age-6","age-7","age-8","age-9","age-10","s-spring","s-fall",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","c-$"]
    },
    {
       "name": "Ice Hockey",
       "image": "images/april-walker-sqMPA86yVws-unsplash.jpg",
-      "desc": "Ice hockey is a fast-paced team sport played on ice. Teams aim to score by shooting the puck into the opposing team's net. It combines physicality and skill on skates."
+      "desc":"",
+      "tags":["age-4","age-5","age-6","age-7","age-8","age-9","age-10","s-winter",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","mi-visual","c-$$"]
    },
    {
       "name": "Rowing",
       "image": "images/josef-stepanek-tqgbG68pH-0-unsplash.jpg",
-      "desc": "Rowing is a water sport where teams or individuals propel boats using oars. It requires synchronized rowing and strength, with races typically held on rivers or lakes."
+      "desc":"",
+      "tags":["age-10","s-spring","s-summer",
+          "c-$$$","mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-naturalistic","mi-intrapersonal","mi-visual","mi-musical"]
    },
    {
       "name": "Gymnastics",
       "image": "images/brett-wharton-IW3_4JTH39o-unsplash.jpg",
-      "desc": "Gymnastics involves a combination of physical strength, flexibility, balance, and coordination. Athletes perform routines on apparatus such as the floor, bars, and beam."
+      "desc":"",
+      "tags":["age-2","age-3","age-4","age-5","age-6","age-7","age-8","age-9","age-10",
+          "s-spring","s-summer","s-fall","s-winter",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-naturalistic","mi-intrapersonal","c-$","olympics"]
    },
    {
       "name": "Fencing",
       "image": "images/nathanael-desmeules--Gn8f-0BuP8-unsplash.jpg",
-      "desc": "Fencing is a combat sport where participants use swords (foils, epees, or sabres) for competitive dueling. It requires precision, strategy, and agility."
+      "desc":"",
+      "tags":["age-9","age-10","c-$$","s-spring","s-summer","s-fall","s-winter",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical","olympics"]
    },
    {
       "name": "Rifle",
       "image": "images/clint-patterson-KXgwRjkPNTI-unsplash.jpg",
-      "desc": "Rifle shooting is a precision sport where participants use rifles to hit targets from a fixed distance. It demands focus, accuracy, and control."
+      "desc":"",
+      "tags":["age-9","age-10","s-spring","s-summer","s-fall","s-winter",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","mi-musical","c-$$","olympics"]
    },
    {
       "name": "Bowling",
       "image": "images/ella-christenson-l6DorjudX64-unsplash.jpg",
-      "desc": "Bowling is a recreational and competitive sport where players roll a heavy ball down a lane to knock down pins. It requires precision and consistency."
+      "desc":"",
+      "tags":["age-3","age-4","age-5","age-6","age-7","age-8","age-9","age-10",
+          "s-spring","s-summer","s-fall","s-winter",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","mi-visual","c-$"]
    },
    {
       "name": "Water Polo",
       "image": "images/davide-buttani-hu7sGvswNqA-unsplash.jpg",
-      "desc": "Water polo is a team sport played in a swimming pool. Teams aim to score by throwing a ball into the opposing team's goal. It involves swimming, passing, and shooting."
+      "desc":"",
+      "tags":["age-8","age-9","age-10","s-summer",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","mi-visual","c-$","olympics"]
    },
    {
       "name": "Beach Volleyball",
       "image": "images/steven-abraham-uIot6M34igU-unsplash.jpg",
-      "desc": "Beach volleyball is a variation of indoor volleyball played on sandy courts. Teams of two players aim to score by sending the ball over the net and into the opponent's court."
+      "desc":"",
+      "tags":["age-8","age-9","age-10","s-spring","s-summer","s-fall",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-intrapersonal","c-$","olympics"]
    },
    {
       "name": "Skiing",
       "image": "images/maarten-duineveld-pmfJcN7RGiw-unsplash.jpg",
-      "desc": "Skiing includes various disciplines such as alpine skiing, Nordic skiing, and freestyle skiing. Athletes navigate downhill courses or perform tricks on snow."
+      "desc":"",
+      "tags":["c-$$","age-3","age-4","age-5","age-6","age-7","age-8","age-9","age-10",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-naturalistic","mi-intrapersonal","s-winter","olympics"]
    },
    {
       "name": "Equestrian",
       "image": "images/mikayla-storms-9h_bJdGqzCk-unsplash.jpg",
-      "desc": "Equestrian sports involve riding horses in various disciplines, such as dressage, show jumping, and eventing. Riders demonstrate control, skill, and harmony with their horses."
+      "desc":"",
+      "tags":["age-6","age-7","age-8","age-9","age-10","s-spring","s-summer","s-fall",
+          "mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic","mi-methematical",
+          "mi-naturalistic","mi-intrapersonal","mi-visual","c-$$$","c-$","olympics"]
    },
-  {
+   {
     "name": "Piano",
     "image": "images/jordan-whitfield-BhfE1IgcsA8-unsplash.jpg",
-    "desc": "Versatile instrument with various sizes for kids. Competitions range from local to international."
+    "desc":"",
+    "tags":["age-4","age-5","age-6","age-7","age-8","age-9","age-10",
+      "s-spring","s-summer","s-fall","s-winter",
+         "c-$$$","mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic",
+         "mi-intrapersonal","mi-musical"]
   },
   {
     "name": "Violin",
     "image": "images/joel-wyncott-tkL2_ZpOECc-unsplash.jpg",
-    "desc": "Classic instrument for children with many competitions, including prestigious international contests."
+    "desc":"",
+    "tags":["age-4","age-5","age-6","age-7","age-8","age-9","age-10",
+      "s-spring","s-summer","s-fall","s-winter",
+         "c-$$$","mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic",
+         "mi-intrapersonal","mi-musical"]
   },
   {
     "name": "Guitar",
     "image": "images/chase-yi-IeTLKtzbLNo-unsplash.jpg",
-    "desc": "Suitable for kids, competitions cover various genres and skill levels."
+    "desc":"",
+    "tags":["age-6","age-7","age-8","age-9","age-10",
+         "s-spring","s-summer","s-fall","s-winter",
+         "c-$$","mi-bodily-kinesthetic","mi-interpersonal","mi-linguistic",
+         "mi-intrapersonal","mi-musical"]
   },
   {
    "name": "drawing art",
    "image": "images/peter-olexa-SIoJI8hUFps-unsplash.jpg",
-   "desc":""
-  }
+   "desc":"",
+   "tags":["age-2","age-3","age-4","age-5","age-6","age-7","age-8","age-9","age-10",
+         "s-spring","s-summer","s-fall","s-winter","mi-linguistic","mi-methematical"
+         ,"mi-visual","mi-bodily-kinesthetic","mi-naturalistic","mi-intrapersonal","c-$"]
+  },
+   {
+      "name": "Track and Field",
+      "image": "https://source.unsplash.com/featured/?track-and-field",
+      "desc": "",
+      "tags": ["age-6","age-7","age-8","age-9",
+         "age-10","c-$", "mi-bodily-kinesthetic", "s-spring", "s-summer", "s-fall","olympics"]
+   },
+   {
+      "name": "Badminton",
+      "image": "https://source.unsplash.com/featured/?badminton",
+      "desc": "",
+      "tags": ["age-6","age-7","age-8","age-9",
+         "age-10", "c-$$", "mi-bodily-kinesthetic", "s-spring", "s-summer", "s-fall","olympics"]
+   },
+   {
+      "name": "Boxing",
+      "image": "https://source.unsplash.com/featured/?boxing",
+      "desc": "",
+      "tags": ["age-8","age-9",
+         "age-10", "c-$$", "mi-bodily-kinesthetic", "s-spring", "s-summer", "s-fall","olympics"]
+   },
+   {
+      "name": "Taekwondo",
+      "image": "https://source.unsplash.com/featured/?taekwondo",
+      "desc": "",
+      "tags": ["age-8","age-9",
+         "age-10", "c-$$", "mi-bodily-kinesthetic", "s-spring", "s-summer", "s-fall","olympics"]
+   }
 ]
+

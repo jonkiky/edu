@@ -52,33 +52,21 @@ const [searchTerm, setSearchTerm] = useState("");
   
 	return (
 
-		<div>
-			<div class="search-paper">
-
+	<div id="search-page">
+			<div className="search-paper">
 				 	<header>
 						 	<div id="search-logo">
-						 	 	<Link href="/">
+						 	<Link href="/explore">
 								  <h2>Explore</h2>
 								</Link>
-								</div>
-						 		<form onSubmit={handleSubmit}>
-									<div className="search-bar">
-													<div className="">
-													  		<input type="text" id="search" placeholder="Search..."  onChange={handleInputChange} />
-													  		</div>
-													<div className="">
-						       							<input type="submit" value="Search" className=" search-btn primary"  onChange={handleSubmit} />
-						       				 </div>
-			       			</div>
-		       			</form>
+						 	</div>
+						 	<div class="line"></div>
 		       </header>
+
 		      <div className="inner" id="content-sections">
 								{outputBody}
 					</div>
 			</div>
-				<div class="wrapper">
-					<Footer />
-				</div>
 		</div>
 			)
 }
