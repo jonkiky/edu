@@ -9,6 +9,7 @@ export default function Section(props){
 	 	message: ""
 	 });
 
+
 	 useEffect(() => {
 
 	 	async function getData(props){
