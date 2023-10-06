@@ -37,14 +37,21 @@ export default function Section(props){
 		      }else{
 		      		setResult({
 		        	loading:false,
-		        	status:"404",
+		        	status:"200",
 		        	message: data?.result?.choices[0]?.message?.content?? ""
 		        });
 		      }
 		  }
 
-		  getData(props);
-
+		  if(props.content&&props.content!==""){
+	 		setResult({
+		        	loading:false,
+		        	status:"200",
+		        	message: props.content
+		    })
+		 	}else{
+			 getData(props);
+		  	}
 		  },
 	[props])
 

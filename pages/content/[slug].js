@@ -2,7 +2,6 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react';
 import { InfinitySpin } from 'react-loader-spinner';
 import Link from 'next/link';
-import fs from 'fs';
 import Footer from "../../components/footer";
 import Section from "../../components/section";
 import QueryBuilder from "../questions";
@@ -25,7 +24,6 @@ const [data, setData] = useState([]);
     event.preventDefault();
     
     if(searchTerm!== ""){
-    	
     	router.push('/content/'+searchTerm);
     }
   };
@@ -36,39 +34,17 @@ const [data, setData] = useState([]);
 	  	router.push('/404');
 	  }
 
-	async function checkIfFileExists(filePath) {
-  fs.stat(filePath, (err, stats) => {
-    if (err) {
-     return false;
-    } else {
-      // The file exists
-      return true;
-    }
-  });
-}
+
 
   useEffect(() => {
-
   	if(sport){
-
-  		const filePath = '../../data/file.json'; // Adjust the file path as needed
-
-	    // Check if the file exists
-	    checkIfFileExists(filePath)
-	      .then((exists) => {
-	        fetchContent(sport)
-	      })
-	      .catch((error) => {
-	      	 setData(askForAI(sport));
-	      });
-
-  		
+  			fetchContent(sport);
   	};
     
   }, [sport]);
 
   const fetchContent = function(sport){
-  	fetch('/api/staticData?keyword='+sport)
+  	fetch('https://raw.githubusercontent.com/jonkiky/edu/master/data/'+sport.replace(/ /g, '_')+'.json')
       .then((response) => {
         if (!response.ok) {
         	// no pre-define data,  will try realy time query
@@ -77,7 +53,7 @@ const [data, setData] = useState([]);
         return response.json();
       })
       .then((jsonData) => {
-        setData(localContent(response.json));
+        setData(localContent(jsonData));
       })
       .catch((error) => {
         setData(error);
@@ -85,38 +61,43 @@ const [data, setData] = useState([]);
   }
 
   const askForAI = function (sport){
-
 	  const queries = QueryBuilder(sport);
-
-	  let outputBody = [];
-
-	  for(var i = 0; i<=queries.length-1; i++){
-	  	
-	  	outputBody.push(	<>
-	  					<h1>{queries[i].title}</h1>
-	  					<p>{queries[i].desc}</p>
-	  					<Section
-	  						title={queries[i].title}
-					  		prompts_system={queries[i].system} 
-					  		prompts_user={queries[i].query}
-					  	/>
-					 </>)
-	  }
-	  return outputBody;
+	  return buildContentFromRes(queries)
+	 
   }
 
   const localContent = function(jsonData){
-  	return "123";
+  	return buildContentFromRes(jsonData.data)
   }
-  
+
+  const buildContentFromRes = function(jsonData){
+   let outputBody = [];
+     console.log(jsonData);
+	  for(var i = 0; i<=jsonData.length-1; i++){
+	  	let content = jsonData[i].response?jsonData[i].response:"" ;
+	  	outputBody.push(	<>
+	  					<h1>{jsonData[i].title}</h1>
+	  					<p>{jsonData[i].desc}</p>
+	  					<Section
+	  						title={jsonData[i].title}
+					  		prompts_system={jsonData[i].system} 
+					  		prompts_user={jsonData[i].query}
+					  		content ={content}
+					  	/>
+					 </>)
+	  }
+	
+	  return outputBody;
+  }
+  console.log(data);
 	return (
 
 	<div id="search-page">
 			<div className="search-paper">
 				 	<header>
 						 	<div id="search-logo">
-						 	<Link href="/explore">
-								  <h2>Explore</h2>
+						 	<Link href="/">
+								   <h2>Just Find Out How</h2>
 								</Link>
 						 	</div>
 						 	<div class="line"></div>
