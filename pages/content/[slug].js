@@ -4,7 +4,7 @@ import { InfinitySpin } from 'react-loader-spinner';
 import Link from 'next/link';
 import Footer from "../../components/footer";
 import Section from "../../components/section";
-import QueryBuilder from "../questions";
+import QueryBuilder from "../../components/questions";
 
 
 
