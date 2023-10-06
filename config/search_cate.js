@@ -21,13 +21,6 @@ export const data = [
                  "mi-bodily-kinesthetic", "mi-interpersonal", "mi-intrapersonal", "olympics"]
     },
     {
-        "name": "Diving",
-        "image": "images/diving.png",
-        "desc": "",
-        "tags": ["age-10", "s-spring", "s-summer", "s-fall", "c-$",
-                 "mi-bodily-kinesthetic", "mi-interpersonal", "mi-intrapersonal"]
-    },
-    {
         "name": "Flag Football",
         "image": "images/flag-football.png",
         "desc": "",
@@ -269,34 +262,6 @@ export const data = [
         "tags": ["age-2", "age-3", "age-4", "age-5", "age-6", "age-7", "age-8", "age-9", "age-10",
                  "s-spring", "s-summer", "s-fall", "s-winter", "mi-linguistic", "mi-methematical"
             , "mi-visual", "mi-bodily-kinesthetic", "mi-naturalistic", "mi-intrapersonal", "c-$"]
-    },
-    {
-        "name": "Track and Field",
-        "image": "https://source.unsplash.com/featured/?track-and-field",
-        "desc": "",
-        "tags": ["age-6", "age-7", "age-8", "age-9",
-                 "age-10", "c-$", "mi-bodily-kinesthetic", "s-spring", "s-summer", "s-fall", "olympics"]
-    },
-    {
-        "name": "Badminton",
-        "image": "https://source.unsplash.com/featured/?badminton",
-        "desc": "",
-        "tags": ["age-6", "age-7", "age-8", "age-9",
-                 "age-10", "c-$$", "mi-bodily-kinesthetic", "s-spring", "s-summer", "s-fall", "olympics"]
-    },
-    {
-        "name": "Boxing",
-        "image": "https://source.unsplash.com/featured/?boxing",
-        "desc": "",
-        "tags": ["age-8", "age-9",
-                 "age-10", "c-$$", "mi-bodily-kinesthetic", "s-spring", "s-summer", "s-fall", "olympics"]
-    },
-    {
-        "name": "Taekwondo Sport",
-        "image": "https://source.unsplash.com/featured/?taekwondo",
-        "desc": "",
-        "tags": ["age-8", "age-9",
-                 "age-10", "c-$$", "mi-bodily-kinesthetic", "s-spring", "s-summer", "s-fall", "olympics"]
     }
 ]
 

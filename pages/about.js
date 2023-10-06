@@ -14,7 +14,7 @@ export default function page() {
 				 	<header>
 						 	<div id="search-logo">
 						 	<Link href="/">
-								   <h2>Just Find Out How</h2>
+								   <h2>Kid Education Hub</h2>
 								</Link>
 						 	</div>
 						 	<div class="line"></div>
