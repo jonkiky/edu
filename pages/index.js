@@ -2,7 +2,7 @@ import { useState,useEffect, useRef,createRef } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image'; 
 import Link from 'next/link';
-import Footer from "../components/footer";
+import Header from "../components/header";
 import {data} from "../config/search_cate";
 import SelectSearch from 'react-select-search';
 import 'react-select-search/style.css'
@@ -131,172 +131,10 @@ export default function Search() {
 		  }
 
 
-const options = [
-    {
-        name: "Figure Skating",
-        value: "Figure_Skating"
-    },
-    {
-        name: "Archery",
-        value: "Archery"
-    },
-    {
-        name: "Fancy Diving",
-        value: "Fancy_Diving"
-    },
-    {
-        name: "Flag Football",
-        value: "Flag_Football"
-    },
-    {
-        name: "Racing Car",
-        value: "Racing_Car"
-    },
-    {
-        name: "Football",
-        value: "Football"
-    },
-    {
-        name: "Basketball",
-        value: "Basketball"
-    },
-    {
-        name: "Baseball",
-        value: "Baseball"
-    },
-    {
-        name: "Softball",
-        value: "Softball"
-    },
-    {
-        name: "Soccer",
-        value: "Soccer"
-    },
-    {
-        name: "Volleyball",
-        value: "Volleyball"
-    },
-    {
-        name: "Wrestling",
-        value: "Wrestling"
-    },
-    {
-        name: "Cross Country",
-        value: "Cross_Country"
-    },
-    {
-        name: "Track and Field",
-        value: "Track_and_Field"
-    },
-    {
-        name: "Swimming and Diving",
-        value: "Swimming_and_Diving"
-    },
-    {
-        name: "Golf",
-        value: "Golf"
-    },
-    {
-        name: "Tennis",
-        value: "Tennis"
-    },
-    {
-        name: "Lacrosse",
-        value: "Lacrosse"
-    },
-    {
-        name: "Field Hockey",
-        value: "Field_Hockey"
-    },
-    {
-        name: "Ice Hockey",
-        value: "Ice_Hockey"
-    },
-    {
-        name: "Rowing",
-        value: "Rowing"
-    },
-    {
-        name: "Gymnastics",
-        value: "Gymnastics"
-    },
-    {
-        name: "Fencing",
-        value: "Fencing"
-    },
-    {
-        name: "Rifle",
-        value: "Rifle"
-    },
-    {
-        name: "Bowling",
-        value: "Bowling"
-    },
-    {
-        name: "Water Polo",
-        value: "Water_Polo"
-    },
-    {
-        name: "Beach Volleyball",
-        value: "Beach_Volleyball"
-    },
-    {
-        name: "Skiing",
-        value: "Skiing"
-    },
-    {
-        name: "Equestrian",
-        value: "Equestrian"
-    },
-    {
-        name: "Piano",
-        value: "Piano"
-    },
-    {
-        name: "Violin",
-        value: "Violin"
-    },
-    {
-        name: "Guitar",
-        value: "Guitar"
-    },
-    {
-        name: "Drawing Art",
-        value: "Drawing_Art"
-    }
-];
-
-const search = (terms)=>{
-	console.log(terms)
-	const newTab = window.open('/content/'+terms, '_blank');
-    newTab.focus();
-}
   return (
   	<div id="search-page">
 			<div className="search-paper">
-				 	<header>
-						 	<div id="search-logo"> 
-						 		<Link href="/">
-									<span className="symbol">
-										<img src="images/logo.png" alt="" />
-									</span>
-								</Link>
-
-						 	<Link href="/">
-								   <h2>Dream Hub</h2>
-								</Link>
-								<span className="search-input">
-										<SelectSearch 
-										options={options}  
-										name="activities"
-										placeholder="Find Activity" 
-										emptyMessage =" No thing founded"
-										search
-										onChange= {(term)=>search(term)}/>
-								</span>
-						 	</div>
-						 	 <div class="line"></div>
-		       </header>
+				 	<Header />
 
 		       <div className="trend-list">
 		       		<div id="facetsearch">
@@ -419,7 +257,7 @@ const search = (terms)=>{
 									 { getList()}
 							</section>
 							<div id="ads">
-								<h2>Dream Hub</h2>
+								<h2>Activities Hub</h2>
 								<p>We aim to help children in discovering their interests and passions while providing parents with 
 								guidance on nurturing hobbies that can help 
 								their children excel in a particular field.</p>

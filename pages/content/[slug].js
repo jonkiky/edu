@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react';
 import { InfinitySpin } from 'react-loader-spinner';
 import Link from 'next/link';
-import Footer from "../../components/footer";
+import Header from "../../components/header";
 import Section from "../../components/section";
 import QueryBuilder from "../../components/questions";
 
@@ -15,18 +15,6 @@ const [data, setData] = useState([]);
 
   const router = useRouter();
 
-	const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setSearchTerm(value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    
-    if(searchTerm!== ""){
-    	router.push('/content/'+searchTerm);
-    }
-  };
 
 	const sport = router.query?.slug;
 
@@ -94,15 +82,7 @@ const [data, setData] = useState([]);
 
 	<div id="search-page">
 			<div className="search-paper">
-				 	<header>
-						 	<div id="search-logo">
-						 	<Link href="/">
-								   <h2>Kid Education Hub</h2>
-								</Link>
-						 	</div>
-						 	<div class="line"></div>
-		       </header>
-
+				 	<Header />
 		      <div className="inner" id="content-sections">
 								{data}
 					</div>
