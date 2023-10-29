@@ -4,7 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Footer from "../components/footer";
 import {data} from "../config/search_cate";
-
+import SelectSearch from 'react-select-search';
+import 'react-select-search/style.css'
 
 export default function Search() {
 
@@ -129,14 +130,170 @@ export default function Search() {
 		  		return list;
 		  }
 
+
+const options = [
+    {
+        name: "Figure Skating",
+        value: "Figure_Skating"
+    },
+    {
+        name: "Archery",
+        value: "Archery"
+    },
+    {
+        name: "Fancy Diving",
+        value: "Fancy_Diving"
+    },
+    {
+        name: "Flag Football",
+        value: "Flag_Football"
+    },
+    {
+        name: "Racing Car",
+        value: "Racing_Car"
+    },
+    {
+        name: "Football",
+        value: "Football"
+    },
+    {
+        name: "Basketball",
+        value: "Basketball"
+    },
+    {
+        name: "Baseball",
+        value: "Baseball"
+    },
+    {
+        name: "Softball",
+        value: "Softball"
+    },
+    {
+        name: "Soccer",
+        value: "Soccer"
+    },
+    {
+        name: "Volleyball",
+        value: "Volleyball"
+    },
+    {
+        name: "Wrestling",
+        value: "Wrestling"
+    },
+    {
+        name: "Cross Country",
+        value: "Cross_Country"
+    },
+    {
+        name: "Track and Field",
+        value: "Track_and_Field"
+    },
+    {
+        name: "Swimming and Diving",
+        value: "Swimming_and_Diving"
+    },
+    {
+        name: "Golf",
+        value: "Golf"
+    },
+    {
+        name: "Tennis",
+        value: "Tennis"
+    },
+    {
+        name: "Lacrosse",
+        value: "Lacrosse"
+    },
+    {
+        name: "Field Hockey",
+        value: "Field_Hockey"
+    },
+    {
+        name: "Ice Hockey",
+        value: "Ice_Hockey"
+    },
+    {
+        name: "Rowing",
+        value: "Rowing"
+    },
+    {
+        name: "Gymnastics",
+        value: "Gymnastics"
+    },
+    {
+        name: "Fencing",
+        value: "Fencing"
+    },
+    {
+        name: "Rifle",
+        value: "Rifle"
+    },
+    {
+        name: "Bowling",
+        value: "Bowling"
+    },
+    {
+        name: "Water Polo",
+        value: "Water_Polo"
+    },
+    {
+        name: "Beach Volleyball",
+        value: "Beach_Volleyball"
+    },
+    {
+        name: "Skiing",
+        value: "Skiing"
+    },
+    {
+        name: "Equestrian",
+        value: "Equestrian"
+    },
+    {
+        name: "Piano",
+        value: "Piano"
+    },
+    {
+        name: "Violin",
+        value: "Violin"
+    },
+    {
+        name: "Guitar",
+        value: "Guitar"
+    },
+    {
+        name: "Drawing Art",
+        value: "Drawing_Art"
+    }
+];
+
+const search = (terms)=>{
+	console.log(terms)
+	const newTab = window.open('/content/'+terms, '_blank');
+    newTab.focus();
+}
   return (
   	<div id="search-page">
 			<div className="search-paper">
 				 	<header>
-						 	<div id="search-logo">
-						 	<Link href="/">
-								  <h2>Kid Education Hub</h2>
+						 	<div id="search-logo"> 
+						 		<Link href="/">
+									<span className="symbol">
+										<img src="images/logo.png" alt="" />
+									</span>
 								</Link>
+
+						 	<Link href="/">
+								   <h2>Dream Hub</h2>
+								</Link>
+								<span className="search-input">
+										<SelectSearch 
+										options={options}  
+										name="activities"
+										placeholder="Find Activity" 
+										emptyMessage =" No thing founded"
+										search
+										onChange= {(term)=>search(term)}/>
+								</span>
 						 	</div>
 						 	 <div class="line"></div>
 		       </header>
@@ -148,44 +305,34 @@ export default function Search() {
 		       			 		<div className="filter-section-options">
 		       			 			<ul>
 		       			 				<li>
-		       			 					
-		       			 							
-		       			 				<input type="checkbox" id="age-2"  value="age-2"  
-          									onChange={(e)=>toggleCheckBoxStatus(e,"age-2")}
-        								/>
-        								<label htmlFor="age-2"> Less than 3</label>
-		       			 				</li>
-		       			 				<li>
 		       			 						<input type="checkbox" id="age-3" value="age-3" 	onChange={(e)=>toggleCheckBoxStatus(e, "age-3")} />
-		       			 						<label htmlFor="age-3"> 3</label>
+		       			 						<label htmlFor="age-3"> Older than 3</label>
 		       			 				</li>
 		       			 				<li>
 		       			 					<input type="checkbox" id="age-4" value="age-4" 	onChange={(e)=>toggleCheckBoxStatus(e, "age-4")} />
-		       			 						<label htmlFor="age-4"> 4</label>
+		       			 						<label htmlFor="age-4"> Older than 4</label>
 		       			 				</li>
 		       			 				<li>
 		       			 						<input type="checkbox" id="age-5" value="age-5" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-5")} />
-		       			 						<label htmlFor="age-5">5</label></li>
+		       			 						<label htmlFor="age-5">Older than 5</label></li>
 		       			 				<li>
 		       			 						<input type="checkbox" id="age-6" value="age-6" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-6")} />
-		       			 						<label htmlFor="age-6">6</label>
+		       			 						<label htmlFor="age-6">Older than 6</label>
 		       			 				</li>
 		       			 				<li>
 		       			 						<input type="checkbox" id="age-7" value="age-7" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-7")} />
-		       			 						<label htmlFor="age-7">7</label>
+		       			 						<label htmlFor="age-7">Older than 7</label>
 		       			 				</li>
 		       			 				<li> 	<input type="checkbox" id="age-8" value="age-8" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-8")} />
-		       			 						<label htmlFor="age-8">8</label></li>
+		       			 						<label htmlFor="age-8">Older than 8</label></li>
 		       			 						<li> 	<input type="checkbox" id="age-9" value="age-9" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-9")} />
-		       			 						<label htmlFor="age-9">9 </label></li>
-		       			 						<li> 	<input type="checkbox" id="age-10" value="age-10" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-10")} />
-		       			 						<label htmlFor="age-10">Older than 9</label></li>
+		       			 						<label htmlFor="age-9">Older than 9 </label></li>
 		       			 			</ul>
 		       			 		</div>
 		       			 </div>
 		       			 <div className="line"></div>
 		       			  <div className="filter-section">
-		       			 		<div className="filter-section-header">Multi-intelligent</div>
+		       			 		<div className="filter-section-header">Multi-intelligence</div>
 		       			 		<div className="filter-section-options">
 		       			 			<ul>
 		       			 				<li>
@@ -272,11 +419,15 @@ export default function Search() {
 									 { getList()}
 							</section>
 							<div id="ads">
-								<h2>Activities Hub For Parents</h2>
-								<p>We aim to assist children in discovering their interests and passions while providing parents with 
+								<h2>Dream Hub</h2>
+								<p>We aim to help children in discovering their interests and passions while providing parents with 
 								guidance on nurturing hobbies that can help 
-								their children excel in a particular field by using <b>AI</b>.</p>
-								<Link href="/about">About Us</Link>
+								their children excel in a particular field.</p>
+								<ul>
+									<li>	<Link href="/about">About Us</Link></li>
+									<li>	<Link href="/use">Terms of Service</Link></li>
+									<li>	<Link href="/policy">Privacy Policy</Link></li>
+								</ul>
 							</div>
 						</div>
 			</div>
