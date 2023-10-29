@@ -60,12 +60,10 @@ const [data, setData] = useState([]);
 
   const buildContentFromRes = function(jsonData){
    let outputBody = [];
-     console.log(jsonData);
 	  for(var i = 0; i<=jsonData.length-1; i++){
 	  	let content = jsonData[i].response?jsonData[i].response:"" ;
 	  	outputBody.push(	<>
-	  					<h1>{jsonData[i].title}</h1>
-	  					<p>{jsonData[i].desc}</p>
+	  					<div className="content-header">{jsonData[i].title}</div>
 	  					<Section
 	  						title={jsonData[i].title}
 					  		prompts_system={jsonData[i].system} 
@@ -77,14 +75,28 @@ const [data, setData] = useState([]);
 	
 	  return outputBody;
   }
-  console.log(data);
+
+
 	return (
 
 	<div id="search-page">
 			<div className="search-paper">
 				 	<Header />
-		      <div className="inner" id="content-sections">
-								{data}
+				 	<div className="trend-list">
+			      <div className="inner" id="content-sections">
+									{data}
+						</div>
+						 <div id="ads">
+									<h2>Activities Hub</h2>
+									<p>We aim to help children in discovering their interests and passions while providing parents with 
+									guidance on nurturing hobbies that can help 
+									their children excel in a particular field.</p>
+									<ul>
+										<li>	<Link href="/about">About Us</Link></li>
+										<li>	<Link href="/use">Terms of Service</Link></li>
+										<li>	<Link href="/policy">Privacy Policy</Link></li>
+									</ul>
+								</div>
 					</div>
 			</div>
 		</div>

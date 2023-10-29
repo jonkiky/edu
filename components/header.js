@@ -167,7 +167,7 @@ const search = (terms)=>{
 										onChange= {(term)=>search(term)}/>
 								</span>
 						 	</div>
-						 	 <div class="line"></div>
+						 	 <div className="line"></div>
 		       </header>
 
 		    

@@ -9,9 +9,7 @@ export default function Section(props){
 	 	message: ""
 	 });
 
-
 	 useEffect(() => {
-
 	 	async function getData(props){
 	 		const response = await fetch("/api/generate", {
 							        method: "POST",
