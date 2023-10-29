@@ -132,8 +132,138 @@ export default function Search() {
 
 
 const options = [
-    {name: 'Golf', value: 'golf'},
-    {name: 'English', value: 'en'},
+    {
+        name: "Figure Skating",
+        value: "Figure_Skating"
+    },
+    {
+        name: "Archery",
+        value: "Archery"
+    },
+    {
+        name: "Fancy Diving",
+        value: "Fancy_Diving"
+    },
+    {
+        name: "Flag Football",
+        value: "Flag_Football"
+    },
+    {
+        name: "Racing Car",
+        value: "Racing_Car"
+    },
+    {
+        name: "Football",
+        value: "Football"
+    },
+    {
+        name: "Basketball",
+        value: "Basketball"
+    },
+    {
+        name: "Baseball",
+        value: "Baseball"
+    },
+    {
+        name: "Softball",
+        value: "Softball"
+    },
+    {
+        name: "Soccer",
+        value: "Soccer"
+    },
+    {
+        name: "Volleyball",
+        value: "Volleyball"
+    },
+    {
+        name: "Wrestling",
+        value: "Wrestling"
+    },
+    {
+        name: "Cross Country",
+        value: "Cross_Country"
+    },
+    {
+        name: "Track and Field",
+        value: "Track_and_Field"
+    },
+    {
+        name: "Swimming and Diving",
+        value: "Swimming_and_Diving"
+    },
+    {
+        name: "Golf",
+        value: "Golf"
+    },
+    {
+        name: "Tennis",
+        value: "Tennis"
+    },
+    {
+        name: "Lacrosse",
+        value: "Lacrosse"
+    },
+    {
+        name: "Field Hockey",
+        value: "Field_Hockey"
+    },
+    {
+        name: "Ice Hockey",
+        value: "Ice_Hockey"
+    },
+    {
+        name: "Rowing",
+        value: "Rowing"
+    },
+    {
+        name: "Gymnastics",
+        value: "Gymnastics"
+    },
+    {
+        name: "Fencing",
+        value: "Fencing"
+    },
+    {
+        name: "Rifle",
+        value: "Rifle"
+    },
+    {
+        name: "Bowling",
+        value: "Bowling"
+    },
+    {
+        name: "Water Polo",
+        value: "Water_Polo"
+    },
+    {
+        name: "Beach Volleyball",
+        value: "Beach_Volleyball"
+    },
+    {
+        name: "Skiing",
+        value: "Skiing"
+    },
+    {
+        name: "Equestrian",
+        value: "Equestrian"
+    },
+    {
+        name: "Piano",
+        value: "Piano"
+    },
+    {
+        name: "Violin",
+        value: "Violin"
+    },
+    {
+        name: "Guitar",
+        value: "Guitar"
+    },
+    {
+        name: "Drawing Art",
+        value: "Drawing_Art"
+    }
 ];
 
 const search = (terms)=>{
