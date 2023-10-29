@@ -3692,10 +3692,11 @@ line-height: normal;
 	position: sticky;
 	height: calc(100vh);
 	overflow-y: scroll;
-	margin:0 20px;
+	margin:0 20px 0 35px;
 	line-height: 22px;
     font-size: 15px;
-    width: 400px;
+    min-width: 255px;
+    width: 255px;
 
 }
 
@@ -3706,7 +3707,7 @@ line-height: normal;
 
 
 .search-input{
-	margin-left: 25px;
+	margin-left: 10px;
 }
 
 .select-search-is-selected {
@@ -3716,10 +3717,9 @@ line-height: normal;
 
 }
 
-
 .select-search-container {
 	margin: 10px 30px;
-    width: 50vw !important;
+    width: calc(100vw - 550px) !important;
     border-radius: 10px;
     border: 1px solid #ccc !important;
     border-radius: 25px;
