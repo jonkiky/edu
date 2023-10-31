@@ -32,7 +32,7 @@ const [data, setData] = useState([]);
   }, [sport]);
 
   const fetchContent = function(sport){
-  	fetch('https://raw.githubusercontent.com/jonkiky/edu/master/data/'+sport.replace(/ /g, '_')+'.json')
+  	fetch('https://raw.githubusercontent.com/jonkiky/edu/dev/data/'+sport.replace(/ /g, '_')+'.json')
       .then((response) => {
         if (!response.ok) {
         	// no pre-define data,  will try realy time query
