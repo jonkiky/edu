@@ -20,13 +20,17 @@ export default function page() {
 							   <div className="content">
 
 							    <p>
-							    	Our webiste host a collection of kids's activites.
-							    	We aim to help children in discovering their interests 
-							    	and passions while providing parents with guidance 
-							    	on nurturing hobbies that can help  children 
-							    	excel in a particular field, also hope 
+							    	Our website hosts a collection of kids' activities. 
+							    	We aim to help children discover their interests and 
+							    	passions while providing parents with guidance on 
+							    	nurturing hobbies that can help children excel in a 
+							    	particular field. We also hope it can motivate kids 
+							    	to move forward.
+							    </p>
 
- 
+							    <b>Why creates the this application?</b>
+							    <p>
+							    	When I was kid, I dream of being a hero.
 							    </p>
 							    </div>
 							   </div>
