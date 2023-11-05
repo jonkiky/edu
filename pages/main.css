@@ -3842,7 +3842,7 @@ line-height: normal;
     					margin: 0;
 				}
 				.tiles {
-					margin-top:190px;
+					margin-top:10px;
 				}
 				.tiles article {
 					width: calc(100% - 4em);
@@ -3854,9 +3854,7 @@ line-height: normal;
 				}
 
 				#ads {
-					    position: absolute; 
-					    top: 40px;
-					    width: 100vw;
+					   display: none;
 				}
 
 
