@@ -3649,6 +3649,7 @@ line-height: normal;
 
 .trend-list{
 	max-width: 1440px;
+	width: 100%;
 	padding: 25px 5px;
 	margin: 30px auto;
 	display: flex;

@@ -104,7 +104,7 @@ export default function Search() {
   		let list = []
 		  for (var i = cate.length - 1; i >= 0; i--) {
 		  		let hrefLink = "/content/"+cate[i].name;
-		  		let img = cate[i].image === "n/a" ? "images/pic01.jpg":cate[i].image;
+		  		let img = "/images/"+cate[i].name.replace(/ /g, "_")+".png";
 		  		if(cate[i].ispublic){
 			  			list.push(
 			  				<article className="style1">
