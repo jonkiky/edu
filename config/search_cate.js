@@ -35,7 +35,8 @@ export const data = [
     {
         "name": "Archery",
         "desc": "",
-        "tags": ["age-6", "age-7", "age-8", "age-9",  "s-spring", "s-summer", "s-fall", "c-$$",
+        "tags": ["age-6", "age-7", "age-8", "age-9",  
+            "s-spring", "s-summer", "s-fall", "c-$$","s-winter",
                  "mi-bodily-kinesthetic", "olympics"],
         "cate": "mi-bodily-kinesthetic"
     },
@@ -43,7 +44,9 @@ export const data = [
         "name": "Artificial Intelligence",
         "desc": "",
         "tags": [
-            "age-9",  "s-spring", "s-summer", "s-fall", "c-$",
+            "age-9",  
+            "s-spring", "s-summer", "s-fall", "s-winter",
+            "c-$",
                  "mi-methematical" ],
         "cate": "mi-methematical"
     },
@@ -51,9 +54,71 @@ export const data = [
         "name": "Artistic Swimming",
         "desc": "",
         "tags": [
-            "age-6", "age-7", "age-8", "age-9", "s-spring", "s-summer", "s-fall", "c-$",
+            "age-6", "age-7", "age-8", "age-9",
+                 "s-summer", "s-fall", "c-$",
                   "mi-bodily-kinesthetic","mi-interpersonal" ],
         "cate": "mi-bodily-kinesthetic"
     },
+    {
+        "name": "Astronomy",
+        "desc": "",
+        "tags": [
+           "age-7", "age-8", "age-9", 
+           "s-spring", "s-summer", "s-fall","s-winter",
+            "c-$",
+                  "Spatial Intelligence","mi-naturalistic" ],
+        "cate": "mi-naturalistic"
+    },
+     {
+        "name": "Auto Racing Simulations eSports",
+        "desc": "",
+        "tags": [
+           "age-7", "age-8", "age-9", 
+           "s-spring", "s-summer", "s-fall","s-winter",
+           "c-$$",
+                  "mi-methematical" ],
+        "cate": "mi-methematical"
+    },
+    {
+        "name": "Badminton",
+        "desc": "",
+        "tags": [
+           "age-5","age-6","age-7", "age-8", "age-9", 
+           "s-spring", "s-summer", "s-fall","s-winter",
+           "c-$",
+                  "mi-bodily-kinesthetic" ],
+        "cate": "mi-bodily-kinesthetic"
+    },
+     {
+        "name": "Ballroom Dance",
+        "desc": "",
+        "tags": [
+           "age-6","age-7", "age-8", "age-9", 
+           "s-spring", "s-summer", "s-fall","s-winter",
+           "c-$",
+             "mi-bodily-kinesthetic","mi-intrapersonal","mi-musical"],
+        "cate": "mi-bodily-kinesthetic"
+    },
+    {
+        "name": "Banjo",
+        "desc": "",
+        "tags": [
+           "age-6","age-7", "age-8", "age-9", 
+           "s-spring", "s-summer", "s-fall","s-winter",
+           "c-$$",
+             "mi-musical"],
+        "cate": "mi-musical"
+    },
+    {
+        "name": "Baseball",
+        "desc": "",
+        "tags": [
+           "age-5","age-6","age-7", "age-8", "age-9", 
+           "s-spring", "s-summer", "s-fall","s-winter",
+           "c-$$",
+             "mi-musical"],
+        "cate": "mi-musical"
+    },
+
 
 ]
