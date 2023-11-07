@@ -52,6 +52,7 @@
         },
         {
             "title": "Schools in USA",
+            "hide":true,
             "system": "please use html <p>, <ul> tag to style your response. all the link should be open in a new tag using target _blank property",
             "desc": "The universities that provide good training programs.",
             "query": "we are looking for the information related to the involve in an activity of Artificial Intelligence, you need to provide the best colleges in the USA that provide professional training if possible.",
