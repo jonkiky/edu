@@ -2772,10 +2772,9 @@ input, select, textarea {
 					margin-top:180px;
 				}
 				.tiles article {
-					width: calc(100% - 4em);
-					margin: 2em 0 0 2em;
+					width: calc(50% - 1em);
+					margin: 1em 0 0 1em;
 				}
-
 				
 
 
@@ -3844,10 +3843,6 @@ line-height: normal;
 				}
 				.tiles {
 					margin-top:190px;
-				}
-				.tiles article {
-					width: calc(100% - 4em);
-					margin: 2em 0 0 2em;
 				}
 
 				#facetsearch {

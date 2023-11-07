@@ -199,4 +199,24 @@ export const data = [
             "mi-bodily-kinesthetic"],
         "cate":  "mi-bodily-kinesthetic"
     },
+      {
+        "name": "Breakdancing",
+        "desc": "",
+        "tags": [
+          "age-6","age-7", "age-8", "age-9", 
+           "s-spring", "s-summer", "s-fall",
+           "c-$$",
+            "mi-bodily-kinesthetic"],
+        "cate":  "mi-bodily-kinesthetic"
+    },
+    {
+        "name": "Calligraphy",
+        "desc": "",
+        "tags": [
+          "age-8", "age-9", 
+           "s-spring", "s-summer", "s-fall","s-winter",
+           "c-$",
+            "mi-visual"],
+        "cate":  "mi-visual"
+    },
 ]
