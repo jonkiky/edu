@@ -1012,22 +1012,5 @@ export const data = [
            "c-$$",
          "mi-bodily-kinesthetic","mi-intrapersonal", ],
         "cate":   "mi-bodily-kinesthetic",
-    },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 ]

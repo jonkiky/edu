@@ -135,7 +135,12 @@ export default function Search() {
   	<div id="search-page">
 			<div className="search-paper">
 				 	<Header />
-
+				 	<div className="mobile-about">
+								<p>We aim to help children in discovering their interests and passions while providing parents with 
+								guidance on nurturing hobbies that can help 
+								their children excel in a particular field.</p>
+								<p> here are a list of hobbies kids may like to try</p>
+				 	</div>
 		       <div className="trend-list">
 		       		<div id="facetsearch">
 		       			 <div className="filter-section">

@@ -3714,6 +3714,7 @@ line-height: normal;
 #ads {
 	position: sticky;
 	height: calc(100vh);
+	top: 66px;
 	overflow-y: scroll;
 	margin:0 20px 0 35px;
 	line-height: 22px;
@@ -3743,7 +3744,8 @@ line-height: normal;
 
 .select-search-container {
 	margin: 10px 30px;
-    width: calc(100vw - 550px) !important;
+	max-width: 900px;
+    width: calc(100vw - 450px) !important;
     border-radius: 10px;
     border: 1px solid #ccc !important;
     border-radius: 25px;
@@ -3836,11 +3838,20 @@ line-height: normal;
     margin-top: 20px;
 }
 
+.mobile-about{
+	display: none;
+}
 
 @media screen and (max-width: 480px) {
+					.mobile-about{
+					display: block;
+					margin-top: 82px;
+				}
+
 				.trend-list {
 					    padding: 0;
-    					margin: 0;
+    					margin-top: -182px;
+    					margin-left: -14px;
 				}
 				.tiles {
 					margin-top:190px;
@@ -3851,11 +3862,11 @@ line-height: normal;
 				}
 
 				#ads {
-					    position: absolute; 
-					    top: 40px;
-					    width: 100vw;
+					   display: none;
 				}
-
+				.select-search-container{
+					display: none;
+				}
 
 
 		}

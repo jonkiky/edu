@@ -10,7 +10,6 @@ import QueryBuilder from "../../components/questions";
 
 export default function page() {
 
-const [searchTerm, setSearchTerm] = useState("");
 const [data, setData] = useState([]);
 
   const router = useRouter();
