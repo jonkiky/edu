@@ -10,7 +10,6 @@ import QueryBuilder from "../../components/questions";
 
 export default function page() {
 
-const [searchTerm, setSearchTerm] = useState("");
 const [data, setData] = useState([]);
 
   const router = useRouter();
@@ -32,7 +31,7 @@ const [data, setData] = useState([]);
   }, [sport]);
 
   const fetchContent = function(sport){
-  	fetch('https://raw.githubusercontent.com/jonkiky/edu/master/data/'+sport.replace(/ /g, '_')+'.json')
+  	fetch('../../data/'+sport.replace(/ /g, '_')+'.json')
       .then((response) => {
         if (!response.ok) {
         	// no pre-define data,  will try realy time query
@@ -61,7 +60,8 @@ const [data, setData] = useState([]);
   const buildContentFromRes = function(jsonData){
    let outputBody = [];
 	  for(var i = 0; i<=jsonData.length-1; i++){
-	  	let content = jsonData[i].response?jsonData[i].response:"" ;
+	  	if(!(jsonData[i].hide&&jsonData[i].hide)){
+	  				let content = jsonData[i].response?jsonData[i].response:"" ;
 	  	outputBody.push(	<>
 	  					<div className="content-header">{jsonData[i].title}</div>
 	  					<Section
@@ -71,7 +71,8 @@ const [data, setData] = useState([]);
 					  		content ={content}
 					  	/>
 					 </>)
-	  }
+	  		}
+	  	}
 	
 	  return outputBody;
   }

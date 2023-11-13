@@ -104,7 +104,7 @@ export default function Search() {
   		let list = []
 		  for (var i = cate.length - 1; i >= 0; i--) {
 		  		let hrefLink = "/content/"+cate[i].name;
-		  		let img = cate[i].image === "n/a" ? "images/pic01.jpg":cate[i].image;
+		  		let img = "/images/"+cate[i].name.replace(/ /g, "_")+".png";
 		  		if(cate[i].ispublic){
 			  			list.push(
 			  				<article className="style1">
@@ -135,7 +135,12 @@ export default function Search() {
   	<div id="search-page">
 			<div className="search-paper">
 				 	<Header />
-
+				 	<div className="mobile-about">
+								<p>We aim to help children in discovering their interests and passions while providing parents with 
+								guidance on nurturing hobbies that can help 
+								their children excel in a particular field.</p>
+								<p> here are a list of hobbies kids may like to try</p>
+				 	</div>
 		       <div className="trend-list">
 		       		<div id="facetsearch">
 		       			 <div className="filter-section">
