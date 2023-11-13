@@ -3869,6 +3869,9 @@ line-height: normal;
 				.select-search-container{
 					display: none;
 				}
-
+				
+				#content-sections{
+					    margin: 260px 20px;
+				}
 
 		}
