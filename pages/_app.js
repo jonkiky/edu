@@ -1,11 +1,20 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { initGA, logPageView } from '../components/analytics';
 import './main.css';
 import Script from 'next/script'
 import Head from "next/head";
 
 
 const App = ({ Component, pageProps }) => {
+
+   useEffect(() => {
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
+    logPageView();
+  }, []);
 
   return (
     <>
