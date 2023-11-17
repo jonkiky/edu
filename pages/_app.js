@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { initGA, logPageView } from '../components/analytics';
+import './customized.css';
 import './main.css';
 import Script from 'next/script'
 import Head from "next/head";

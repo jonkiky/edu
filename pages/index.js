@@ -16,19 +16,19 @@ export default function Search() {
   const [tags, setTags] = useState([]);
 	const [checkboxStatus, setCheckboxStatus] = useState(Array.from(22,() => false));
 	const [filterVisible, setFilterVisible] = useState(false);
- 	const [ageVisible, setAgeVisible] = useState(false);
-  const [miVisible, setMiVisible] = useState(false);
-  const [seasonVisible, setSeasonVisible] = useState(false);
-  const [costVisible, setCostVisible] = useState(false);
+	
 	useEffect(() => {
    setCate(filter(data,tags))
   }, [data,tags]);
-
 
  const handleMobileClick = (tag) => {
 
   	if(tag == "filter"){
   		setFilterVisible(!filterVisible);
+  	}
+
+  	if(tag == "about"){
+  		router.push('/about');
   	}
   }
 
