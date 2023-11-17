@@ -2,6 +2,8 @@ import { useState,useEffect, useRef,createRef } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image'; 
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSliders, faCircleInfo } from '@fortawesome/free-solid-svg-icons'
 import Header from "../components/header";
 import {data} from "../config/search_cate";
 import SelectSearch from 'react-select-search';
@@ -13,17 +15,26 @@ export default function Search() {
   const [cate, setCate] = useState([]);
   const [tags, setTags] = useState([]);
 	const [checkboxStatus, setCheckboxStatus] = useState(Array.from(22,() => false));
-
+	const [filterVisible, setFilterVisible] = useState(false);
+ 	const [ageVisible, setAgeVisible] = useState(false);
+  const [miVisible, setMiVisible] = useState(false);
+  const [seasonVisible, setSeasonVisible] = useState(false);
+  const [costVisible, setCostVisible] = useState(false);
 	useEffect(() => {
    setCate(filter(data,tags))
   }, [data,tags]);
 
+
+ const handleMobileClick = (tag) => {
+
+  	if(tag == "filter"){
+  		setFilterVisible(!filterVisible);
+  	}
+  }
+
 	function filter(data=[],tags=[]){
-
-
 		let transferedData = data.map((d) =>{
 	 	let addProperty ={ispublic: false};
-
 	 		let age_flag = 0 ;
 			let mi_flag = 0 ;
 			let cost_flag = 0 ;
@@ -89,6 +100,7 @@ export default function Search() {
 	}
 
 	const toggleCheckBoxStatus = (event, value) => {
+
 		let updatedTags = tags
 		if(event?.target?.checked){
 				 updatedTags = addTag(tags,value);
@@ -111,7 +123,7 @@ export default function Search() {
 												<span className="image">
 													<img src={img} alt="" />
 												</span>
-												<a href={hrefLink} target="_blank" >
+												<a href={hrefLink} target="_self" >
 													<h2>{cate[i].name}</h2>
 													<div className="content">
 														<p>{cate[i].desc}</p>
@@ -135,15 +147,9 @@ export default function Search() {
   	<div id="search-page">
 			<div className="search-paper">
 				 	<Header />
-				 	<div className="mobile-about">
-								<p>We aim to help children in discovering their interests and passions while providing parents with 
-								guidance on nurturing hobbies that can help 
-								their children excel in a particular field.</p>
-								<p> here are a list of hobbies kids may like to try</p>
-				 	</div>
 		       <div className="trend-list">
-		       		<div id="facetsearch">
-		       			 <div className="filter-section">
+		       		<div id="facetsearch" className={`filter ${filterVisible ? 'visible' : ''}`}>
+		       			 <div className="filter-section" >
 		       			 		<div className="filter-section-header">Age</div>
 		       			 		<div className="filter-section-options">
 		       			 			<ul>
@@ -174,7 +180,7 @@ export default function Search() {
 		       			 		</div>
 		       			 </div>
 		       			 <div className="line"></div>
-		       			  <div className="filter-section">
+		       			  <div className="filter-section" >
 		       			 		<div className="filter-section-header">Multi-intelligence</div>
 		       			 		<div className="filter-section-options">
 		       			 			<ul>
@@ -214,7 +220,7 @@ export default function Search() {
 		       			 		</div>
 		       			 </div>
 		       			 <div className="line"></div>
-		       			 <div className="filter-section">
+		       			 <div className="filter-section" >
 		       			 		<div className="filter-section-header">Cost</div>
 		       			 		<div className="filter-section-options">
 		       			 			<ul>
@@ -234,7 +240,7 @@ export default function Search() {
 		       			 		</div>
 		       			 </div>
 		       			 <div className="line"></div>
-		       			 <div className="filter-section">
+		       			 <div className="filter-section" >
 		       			 		<div className="filter-section-header">Season</div>
 		       			 		<div className="filter-section-options">
 		       			 			<ul>
@@ -273,6 +279,20 @@ export default function Search() {
 								</ul>
 							</div>
 						</div>
+
+						<div id="mobile-facetsearch">
+		       			 	<div className="filter-section-header">
+		       			 		<button onClick={()=>handleMobileClick("filter")}> 
+		       			 		<FontAwesomeIcon icon={faSliders} style={{ width: "20px"}} fade /> 
+		       			 		 </button>
+		       			 	</div>
+		       			
+		       			 	<div className="filter-section-header">
+		       			 		<button onClick={()=>handleMobileClick("about")}> 
+		       			 		<FontAwesomeIcon icon={faCircleInfo} style={{ width: "20px" }} fade /> 
+		       			 		</button>
+		       			 		</div>
+		        </div>	
 			</div>
 				
 		</div>

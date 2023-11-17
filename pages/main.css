@@ -2753,16 +2753,10 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 				.tiles article {
-					width: calc(50% - 1em);
+					width: calc(50% - 1.5em);
 					margin: 1em 0 0 1em;
 				}
 
-					.tiles article:hover > .image {
-						-moz-transform: scale(1.0);
-						-webkit-transform: scale(1.0);
-						-ms-transform: scale(1.0);
-						transform: scale(1.0);
-					}
 
 		}
 
@@ -2772,12 +2766,9 @@ input, select, textarea {
 					margin-top:180px;
 				}
 				.tiles article {
-					width: calc(50% - 1em);
-					margin: 1em 0 0 1em;
+					width: calc(50% - 2em);
+					margin: 1em 0.25em 0.25em 1em;
 				}
-				
-
-
 
 		}
 
@@ -3842,27 +3833,83 @@ line-height: normal;
 	display: none;
 }
 
+#mobile-facetsearch{
+	display: none;
+}
+
+
 @media screen and (max-width: 480px) {
-					.mobile-about{
-					display: block;
-					margin-top: 82px;
-					margin-left: 15px;
-    					margin-right: 15px;
-				}
+
+					.filter.visible {
+					 display: block;
+				    background-color: rgba(255, 255, 255, 0.96);
+				    z-index: 999;
+				    width: 100vw;
+				    bottom: 300px;
+				    padding: 20px 0 20px 30px !important;
+					}
+
+					.filter {
+						display: none;
+					}
+
+					#facetsearch {
+						position: fixed;
+					    width: 100vw;
+					    margin: 0;
+					    padding: 0;
+					    z-index: 999;
+					    height: auto;
+					    bottom: 50px
+					}
+
+					.line{
+						display: none;
+					}
+					#mobile-facetsearch-age{
+						position: fixed;
+					    bottom: 60px;
+					    display: flex;
+					    flex-direction: row;
+					    background: #fff;
+					    width: 100%;
+					    z-index: 999;
+					}
+					#mobile-facetsearch{
+						position: fixed;
+					    bottom: 0;
+					    display: flex;
+					    flex-direction: row;
+					    background: #fff;
+					    width: 100%;
+					    z-index: 999;
+					}
+
+					#mobile-facetsearch .filter-section-header {
+						width:  50%;
+						text-align: center;
+						padding: 2px 0;
+					}
+					#mobile-facetsearch .filter-section-header button {
+						width: 100%;
+					    height: 60px;
+					    background: #fff;
+					    border: #fff;
+					    color: #585858;
+					    border-top: #ccc solid 1px;
+					    vertical-align: middle;
+
+					}
 
 				.trend-list {
 					    padding: 0;
-    					margin-top: -182px;
-    					margin-left: -8px;
+    					margin: -120px auto auto 5px;
 				}
 				.tiles {
 					margin-top:190px;
 				}
 
-				#facetsearch {
-					display: none;
-				}
-
+				
 				#ads {
 					   display: none;
 				}

@@ -1,0 +1,39 @@
+Config:
+    # Domain name of the project, used to generate UUIDs, required!
+    # for ICDC use: caninecommons.cancer.gov
+    # for CTDC use: trialcommons.cancer.gov
+    # for Bento reference implementation use: bento-tools.org
+
+    domain: 'trialcommons-dev.cancer.gov/'
+    adapter_module: adapters.local_adapter
+    adapter_class: BentoLocal
+    adapter_params:
+        name_field: file_name
+        md5_field: original_md5sum
+        size_field: original_file_size
+        data_dir:  /Users/cheny39/Desktop/ctdc/CTDC-Prod-Datafiles
+    # Destination bucket name
+    bucket: yizhen-ctdc
+    # Prefix for files in destination bucket
+    prefix: 
+    # First line to load, 1 based not counting headers, default is 1
+    #first: 1
+    # Number of files to copy, default is -1 means all files in the file
+    #count: -1
+    # Number of retries, default is 3
+    retry: 1
+    # Running mode, can be 'master', 'slave' or 'solo', default is 'solo'
+    mode: solo
+    # Job SQS queue name
+    #job_queue: ming-file-loader-job.fifo
+    # Result SQS queue name
+    #result_queue: ming-file-loader-result.fifo
+
+    # Pre-manifest file
+    pre_manifest: /Users/cheny39/Desktop/ctdc/CTDC-Prod-Datafiles/File Transfer Manifest for ICDC Test Files Destined for CTDC v1.tsv.txt
+
+    # Overwrite file even same size file already exists at destination
+    overwrite: false
+    # Only check original file, won't copy any files
+    #dryrun: false
+    verify_md5: false
