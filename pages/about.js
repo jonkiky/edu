@@ -14,7 +14,7 @@ export default function page() {
 			<div className="search-paper">
 				 	<Header />
 		     		<div className="static-trend-list">
-		     				 <div className="inner" id="content-sections">
+		     				 <div className="inner" id="about-content-sections">
 		     				  <div className="content-header">About Us</div>
 
 							   <div className="content">

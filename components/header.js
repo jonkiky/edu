@@ -108,9 +108,9 @@ const options = [{ name:"Accordion",value:"Accordion"},
 { name: "Figure Skating",value:"Figure_Skating"}
 ];
 
+const router = useRouter();
 const search = (terms)=>{
-	const newTab = window.open('/content/'+terms, '_blank');
-    newTab.focus();
+	router.push('/content/'+terms);
 }
   return (
 				 	<header>
@@ -121,8 +121,10 @@ const search = (terms)=>{
 									</span>
 								</Link>
 
-						 	<Link href="/">
+						 		<Link href="/">
+						 			<span className="title">
 								   <h2>Activities Hub</h2>
+								  </span>
 								</Link>
 								<span className="search-input">
 										<SelectSearch 
