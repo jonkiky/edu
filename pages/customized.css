@@ -1,3 +1,7 @@
+#index-paper{
+	margin: auto;
+}
+
 
 #solution {
 	position: relative;
@@ -142,7 +146,7 @@ line-height: normal;
 }
 
 #search-logo img{
-	width: 45px;
+	width: 25px;
 	vertical-align: middle;
 	margin-left: 18px;
 	margin-right: 15px;
@@ -518,3 +522,317 @@ line-height: normal;
 				    margin: 2em 0 1em 0;
 				}
 		}
+
+
+#home-section {
+	display: flex;
+	flex-direction: column;
+    min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	max-width: 1440px;
+	margin: auto;
+	
+}
+
+.home-content {
+	height: 100%;
+	width: 100%;
+	margin: 10px;
+	max-width: 1440px;
+}
+
+
+
+#home-section #search-logo{
+	margin-left: -13px;
+}
+
+#home-section .response{
+	margin: 50px 20px 0 20px;
+	padding: 50px 0;
+	background: linear-gradient(to right, #fff 0, transparent 100px), linear-gradient(to left, #fff 0, transparent 100px), linear-gradient(#ebf1f8 0, #fff 80px);
+}
+#home-section .home-header-title{
+	text-decoration: none;
+    text-transform: uppercase;
+    color: #484848;
+    font-family: Georama;
+    font-weight: 400;
+    margin: 0;
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+
+#home-section input[type=text]{
+	min-width: 500px;
+	padding: 30px;
+	margin: 10px 0;
+	display: flex;
+    z-index: 3;
+    position: relative;
+    min-height: 44px;
+    background: #fff;
+    border: 1px solid #cfcfcf;
+    box-shadow: none;
+    border-radius: 24px;
+    width: 638px;
+}
+
+#home-section .button-group{
+	text-align: center;
+	margin: 0 auto;
+}
+
+#home-section button
+{
+	border: none;
+    border-radius: 0px;
+    width: 280px;
+    height: 69px;
+    font-size: 24px;
+    color: #fff;
+    margin: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    background: #383838;
+
+}
+.home-search-input{
+	position: relative;
+	margin: 20vh auto 10vh auto;
+}
+.home-search-input p{
+	max-width: 1200px;
+	font-size: 32px;
+	margin: auto;
+}
+
+.home-search-input h1{
+	max-width: 1200px;
+	margin: auto;
+    color: #484848;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 58px;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+.home-search-icon{
+	width: 25px;
+    position: absolute;
+    right: 23px;
+    top: 20px;
+    z-index: 11;
+    color: #ccc;
+    font-weight: 100;
+}
+
+#home-section button span{
+	margin-top: -14px;
+}
+
+.questions{
+	padding: 30px;
+	width: 50%;
+	position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: scroll;
+        margin: 5px;
+}
+.question{
+	margin: 30px auto;
+
+}
+.question p{
+	margin: 10px auto;
+	font-size: 20px;
+}
+
+.question label{
+	font-weight: 500;
+}
+
+.question-options input{
+	    margin: 7px 4px;
+
+}
+.question-options{
+	display: flex;
+	font-size: 20px;
+}
+.questions-right{
+	width: 50%;
+	display: flex;
+	flex-direction: row;  
+	margin: 5px 10px 5px 5px;
+	flex-wrap: wrap;
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	overflow:scroll;
+}
+.left{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+.right{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+.mi {
+	width: fit-content;
+	 margin:5px;
+    padding: 10px;
+    height: 100%;
+}
+.mi-explain {
+	width: fit-content;
+	 margin:5px;
+    padding: 10px;
+}
+.activities, .career, .development-path {
+	width: fit-content;
+	 margin:5px;
+    padding: 10px;
+}
+.even-line {
+  background-color: #f0f0f0; /* Set the background color for even lines */
+}
+
+.odd-line {
+  background-color: #ffffff; /* Set the background color for odd lines */
+}
+
+
+
+#talent-section #search-logo{
+    margin-left: 0px;
+}
+
+#talent-section .response{
+    margin: 50px 20px 0 20px;
+    padding: 50px 0;
+    background: linear-gradient(to right, #fff 0, transparent 100px), linear-gradient(to left, #fff 0, transparent 100px), linear-gradient(#ebf1f8 0, #fff 80px);
+}
+#talent-section .home-header-title{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #484848;
+    font-family: Georama;
+    font-weight: 400;
+    margin: 0;
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+
+#talent-section input[type=text]{
+    min-width: 500px;
+    padding: 30px;
+    margin: 10px 0;
+    display: flex;
+    z-index: 3;
+    position: relative;
+    min-height: 44px;
+    background: #fff;
+    border: 1px solid #cfcfcf;
+    box-shadow: none;
+    border-radius: 24px;
+    width: 638px;
+}
+
+#talent-section .button-group{
+    text-align: center;
+    margin: 0 auto;
+}
+
+#talent-section button
+{
+    border: none;
+    border-radius: 0px;
+    width: 280px;
+    height: 69px;
+    font-size: 24px;
+    color: #fff;
+    margin: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    background: #383838;
+
+}
+
+
+
+.talent-content {
+    height: 100%;
+    width: 100%;
+    margin: 10px;
+    display: flex;
+}
+
+
+
+#talent-section button span{
+    margin-top: -14px;
+}
+
+#talent-section .border{
+    border: 2px solid #cfcfcf;
+    border-radius: 25px;
+   
+}
+
+
+@media screen and (max-width: 480px) {
+    .questions-right {
+        width: 100%;
+        position: relative;
+        height: 100%;
+    }
+
+    .questions-right .border {
+        border: 0;
+    }
+
+    .questions {
+        width: 100%;
+        position: relative;
+        height: 100%;
+    }
+
+    .talent-content {
+        display: block;
+            margin-top: 60px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .mi, .career,.development-path {
+        width: fit-content;
+        margin: 5px;
+        padding: 10px;
+        height: 100%;
+    }
+
+    #talent-section #search-logo{
+    	    position: fixed;
+		    background: #fff;
+		    z-index: 10;
+		    width: 100vw;
+		    height: 57px;
+		    margin-top: -10px;
+		    padding-top: 8px;
+		        top: 0;
+    }
+
+}
+
