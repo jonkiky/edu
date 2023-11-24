@@ -663,6 +663,7 @@ line-height: normal;
 .question-options{
 	display: flex;
 	font-size: 20px;
+	flex-wrap: wrap;
 }
 .questions-right{
 	width: 50%;
@@ -801,14 +802,15 @@ line-height: normal;
     }
 
     .questions {
-        width: 100%;
+        width: 98%;
         position: relative;
         height: 100%;
+        padding: 15px;
     }
 
     .talent-content {
-        display: block;
-            margin-top: 60px;
+        display:block;
+            margin: 60px 0px;
     }
 
     .left,
@@ -834,5 +836,21 @@ line-height: normal;
 		        top: 0;
     }
 
-}
+    .home-content{
+    	margin: 30px 0px;
+	    width: 100%;
+	    padding: 0 20px;
+    }
+
+    .home-search-input{
+    	margin: 10vh auto 10vh auto;
+    }
+    .home-content input{
+    	font-size: 37px;
+    }
+
+    .home-search-input p{
+    	font-size: 24px;
+    }
+}	
 
