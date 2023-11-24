@@ -6,7 +6,7 @@ const openai = new OpenAI({
 
 export default async function (req, res) {
 
-  const prompt = req.body.question;
+  const prompt = req.body.user || req.body.system || '';
 
   if (prompt.trim().length === 0) {
     res.status(400).json({
@@ -24,11 +24,11 @@ const response = await openai.chat.completions.create({
   messages: [
     {
       "role": "system",
-      "content": "You are the agent to provide, Please build response in html format, no link attached. "
+      "content": "Generate ideas and suggestions for parents to identify and encourage their children's interests. Consider providing tips on how to observe and understand a child's preferences, activities that promote exploration, and ways to support and develop these interests over time."
     },
     {
       "role": "user",
-      "content": req.body.question
+      "content": req.body.content
     }
       ],
   temperature: 0.5,

@@ -1,300 +1,58 @@
-import { useState,useEffect, useRef,createRef } from 'react';
-import { useRouter } from 'next/router';
-import Image from 'next/image'; 
+import { useEffect, useState } from 'react';
+import { InfinitySpin } from 'react-loader-spinner';
 import Link from 'next/link';
+import PropagateLoader from "react-spinners/PropagateLoader";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSliders, faCircleInfo } from '@fortawesome/free-solid-svg-icons'
-import Header from "../components/header";
-import {data} from "../config/search_cate";
-import SelectSearch from 'react-select-search';
-import 'react-select-search/style.css'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
-export default function Search() {
 
-  const router = useRouter();
-  const [cate, setCate] = useState([]);
-  const [tags, setTags] = useState([]);
-	const [checkboxStatus, setCheckboxStatus] = useState(Array.from(22,() => false));
-	const [filterVisible, setFilterVisible] = useState(false);
-	
-	useEffect(() => {
-   setCate(filter(data,tags))
-  }, [data,tags]);
 
- const handleMobileClick = (tag) => {
 
-  	if(tag == "filter"){
-  		setFilterVisible(!filterVisible);
-  	}
+export default function Home() {
+  const [question, setQuestion] = useState("");
+  const [result, setResult] = useState("<div class=\"sections\"><div><p>Figure skating is a beautiful and artistic sport where skaters perform on ice, combining graceful movements, jumps, spins, and dance steps to music. Imagine dancing, but instead of a dance floor, you have a smooth, glistening sheet of ice to move across wearing special boots with blades—those are your ice skates!</p><p><strong>Benefits of Figure Skating:</strong></p><ul>  <li>Physical Fitness: Skating improves cardiovascular health, flexibility, muscle strength, and coordination.</li>  <li>Confidence and Performance Skills: As skaters learn and master new skills, their self-confidence grows. Performing routines can also enhance public performance skills.</li>  <li>Mental Discipline: Figure skating requires concentration, memory, and discipline, which can benefit kids in many areas of life.</li>  <li>Stress Relief: Physical activity, including skating, is a great way to relieve stress and improve mood.</li>  <li>Social Opportunities: Skating classes and rinks provide a chance to meet new friends and be part of a community with a common interest.</li></ul><p>Children can start learning figure skating at a young age. Many clubs offer <em>\"Learn to Skate\"</em> programs for children as young as 3 to 5 years old. This is a good time to introduce them to the ice, as they can learn quickly and have fewer fears.</p><p>Figure skating is often seen as a <strong>winter</strong> activity because it requires cold temperatures to maintain the ice. However, thanks to indoor ice rinks, figure skating can be enjoyed year-round! Competitions and ice shows tend to peak during the winter months, but training and lessons continue throughout all seasons in indoor facilities.</p><p>If you're interested in pursuing figure skating, you can find programs at local ice rinks or sports centers. Remember, the key is to have fun and enjoy the glide!</p></div></div>");
+  const [loading, setLoading] = useState(false);
 
-  	if(tag == "about"){
-  		router.push('/about');
-  	}
+   function handleClick(event) {
+   	if(event == "ask"){
+   		if(question !== "") Talents();
+   	}else{
+   		Explore();
+   	}
   }
 
-	function filter(data=[],tags=[]){
-		let transferedData = data.map((d) =>{
-	 	let addProperty ={ispublic: false};
-	 		let age_flag = 0 ;
-			let mi_flag = 0 ;
-			let cost_flag = 0 ;
-			let season_flag = 0 ;
+  function Explore(){
+  	window.open('/explore', '_blank');
+  }
 
-			for (var i = tags.length - 1; i >= 0; i--) {
-					if(tags[i].includes("age-")){
-							if(!age_flag == 1){
-								if(d?.tags?.includes(tags[i])){
-									age_flag=1;
-								}else{
-									age_flag=-1;
-								}
-							}
-					}
-					if(tags[i].includes("mi-")){
-							if(mi_flag !== 1){
-								if(d?.tags?.includes(tags[i])){
-									mi_flag=1;
-								}else{
-									mi_flag=-1;
-								}
-							}
-					}
-					if(tags[i].includes("c-")){
-							if(!cost_flag == 1){
-								if(d?.tags?.includes(tags[i])){
-									cost_flag=1;
-								}else{
-									cost_flag=-1;
-								}
-							}
-					}
-					if(tags[i].includes("s-")){
-							if(!season_flag == 1){
-								if(d?.tags?.includes(tags[i])){
-									season_flag=1;
-								}else{
-									season_flag=-1;
-								}
-							}
-					}
-			}
-
-		if(age_flag>=0 && mi_flag>=0 && cost_flag>=0 && season_flag >=0){
-			addProperty={ispublic: true};
-		}
-	 	return({ ...d, ...addProperty })
-	 }); 
-		return transferedData;
-	}
-
-	function addTag(arr, tag) {
-	  if (!arr.includes(tag)) {
-	    arr.push(tag); // Add the element to the array
-	  }
-	  return arr;
-	}
-
-
-	function removeTag(arr, tag){
-		return arr.filter(obj => obj!== tag);
-	}
-
-	const toggleCheckBoxStatus = (event, value) => {
-
-		let updatedTags = tags
-		if(event?.target?.checked){
-				 updatedTags = addTag(tags,value);
-			
-		}else{
-			   updatedTags = removeTag(tags,value);
-		}
-			setTags(updatedTags);
-			setCate(filter(data,updatedTags))
-  };
-
-  function getList(){
-  		let list = []
-		  for (var i = cate.length - 1; i >= 0; i--) {
-		  		let hrefLink = "/content/"+cate[i].name;
-		  		let img = "/images/"+cate[i].name.replace(/ /g, "_")+".png";
-		  		if(cate[i].ispublic){
-			  			list.push(
-			  				<article className="style1">
-												<span className="image">
-													<img src={img} alt="" />
-												</span>
-												<a href={hrefLink} target="_self" >
-													<h2>{cate[i].name}</h2>
-													<div className="content">
-														<p>{cate[i].desc}</p>
-													</div>
-												</a>
-										</article>);
-			  				
-			  		}
-		  		}
-
-		  		if(list.length==0){
-		  			list = 	[<article className="nofound">
-												No result
-										</article>]
-		  		}
-		  		return list;
-		  }
-
-
+  function Explore(){
+  	window.open('/talent', '_self');
+  }
   return (
-  	<div id="search-page">
-			<div className="search-paper">
-				 	<Header />
-		       <div className="trend-list">
-		       		<div id="facetsearch" className={`filter ${filterVisible ? 'visible' : ''}`}>
-		       			 <div className="filter-section" >
-		       			 		<div className="filter-section-header">Age</div>
-		       			 		<div className="filter-section-options">
-		       			 			<ul>
-		       			 				<li>
-		       			 						<input type="checkbox" id="age-3" value="age-3" 	onChange={(e)=>toggleCheckBoxStatus(e, "age-3")} />
-		       			 						<label htmlFor="age-3"> Older than 3</label>
-		       			 				</li>
-		       			 				<li>
-		       			 					<input type="checkbox" id="age-4" value="age-4" 	onChange={(e)=>toggleCheckBoxStatus(e, "age-4")} />
-		       			 						<label htmlFor="age-4"> Older than 4</label>
-		       			 				</li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="age-5" value="age-5" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-5")} />
-		       			 						<label htmlFor="age-5">Older than 5</label></li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="age-6" value="age-6" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-6")} />
-		       			 						<label htmlFor="age-6">Older than 6</label>
-		       			 				</li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="age-7" value="age-7" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-7")} />
-		       			 						<label htmlFor="age-7">Older than 7</label>
-		       			 				</li>
-		       			 				<li> 	<input type="checkbox" id="age-8" value="age-8" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-8")} />
-		       			 						<label htmlFor="age-8">Older than 8</label></li>
-		       			 						<li> 	<input type="checkbox" id="age-9" value="age-9" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-9")} />
-		       			 						<label htmlFor="age-9">Older than 9 </label></li>
-		       			 			</ul>
-		       			 		</div>
-		       			 </div>
-		       			 <div className="line"></div>
-		       			  <div className="filter-section" >
-		       			 		<div className="filter-section-header">Multi-intelligence</div>
-		       			 		<div className="filter-section-options">
-		       			 			<ul>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-body" value="mi-bodily-kinesthetic" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-bodily-kinesthetic")} />
-		       			 						<label htmlFor="mi-body">Bodily Kinesthetic</label>
-		       			 						 </li>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-interpersonal" value="mi-interpersonal" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-interpersonal")} />
-		       			 						<label htmlFor="mi-interpersonal">Interpersonal</label>
-		       			 						 </li>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-vl" value="mi-linguistic" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-linguistic")} />
-		       			 						<label htmlFor="mi-vl">Verbal Linguistic</label>
-		       			 						</li>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-lm" value="mi-methematical" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-methematical")} />
-		       			 						<label htmlFor="mi-lm">Logical Methematical</label>
-		       			 				</li>
-		       			 				<li>
-		       			 					<input type="checkbox" id="mi-na" value="mi-naturalistic" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-naturalistic")} />
-		       			 						<label htmlFor="mi-na">Naturalistic</label>
-		       			 						</li>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-intrapersonal" value="mi-intrapersonal"  	onChange={(e)=>toggleCheckBoxStatus(e,"mi-intrapersonal")}/>
-		       			 						<label htmlFor="mi-intrapersonal">Intrapersonal</label>
-		       			 						</li>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-vs" value="mi-visual" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-visual")} />
-		       			 						<label htmlFor="mi-vs">Visual Spatial</label>
-		       			 						</li>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-ms" value="mi-musical" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-musical")} />
-		       			 						<label htmlFor="mi-ms">Musical</label>
-		       			 				</li>
-		       			 			</ul>
-		       			 		</div>
-		       			 </div>
-		       			 <div className="line"></div>
-		       			 <div className="filter-section" >
-		       			 		<div className="filter-section-header">Cost</div>
-		       			 		<div className="filter-section-options">
-		       			 			<ul>
-		       			 				<li>
-		       			 						<input type="checkbox" id="cost1" value="c-$" 	onChange={(e)=>toggleCheckBoxStatus(e,"c-$")} />
-		       			 						<label htmlFor="cost1">$</label>
-		       			 				</li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="cost2" value="c-$$" 	onChange={(e)=>toggleCheckBoxStatus(e,"c-$$")} />
-		       			 						<label htmlFor="cost2">$$</label>
-		       			 				</li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="cost3" value="c-$$$" 	onChange={(e)=>toggleCheckBoxStatus(e,"c-$$$")} />
-		       			 						<label htmlFor="cost3">$$$</label>
-		       			 				</li>
-		       			 			</ul>
-		       			 		</div>
-		       			 </div>
-		       			 <div className="line"></div>
-		       			 <div className="filter-section" >
-		       			 		<div className="filter-section-header">Season</div>
-		       			 		<div className="filter-section-options">
-		       			 			<ul>
-		       			 				<li>
-		       			 						<input type="checkbox" id="spring" value="s-spring" 	onChange={(e)=>toggleCheckBoxStatus(e,"s-spring")} />
-		       			 						<label htmlFor="spring">Spring</label>
-		       			 				</li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="summer" value="s-summer" 	onChange={(e)=>toggleCheckBoxStatus(e,"s-summer")} />
-		       			 						<label htmlFor="summer">Summer</label>
-		       			 				</li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="fall" value="s-fall" 	onChange={(e)=>toggleCheckBoxStatus(e,"s-fall")} />
-		       			 						<label htmlFor="fall">Fall</label>
-		       			 				</li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="winter" value="s-winter" 	onChange={(e)=>toggleCheckBoxStatus(e,"s-winter")} />
-		       			 						<label htmlFor="winter">Winter</label>
-		       			 				</li>
-		       			 			</ul>
-		       			 		</div>
-		       			 </div>
-		       		</div>
-							<section className="tiles">
-									 { getList()}
-							</section>
-							<div id="ads">
-								<h2>Activities Hub</h2>
-								<p>We aim to help children in discovering their interests and passions while providing parents with 
-								guidance on nurturing hobbies that can help 
-								their children excel in a particular field.</p>
-								<ul>
-									<li>	<Link href="/about">About Us</Link></li>
-									<li>	<Link href="/use">Terms of Service</Link></li>
-									<li>	<Link href="/policy">Privacy Policy</Link></li>
-								</ul>
-							</div>
-						</div>
-
-						<div id="mobile-facetsearch">
-		       			 	<div className="filter-section-header">
-		       			 		<button onClick={()=>handleMobileClick("filter")}> 
-		       			 		<FontAwesomeIcon icon={faSliders} style={{ width: "20px"}} fade /> 
-		       			 		 </button>
-		       			 	</div>
-		       			
-		       			 	<div className="filter-section-header">
-		       			 		<button onClick={()=>handleMobileClick("about")}> 
-		       			 		<FontAwesomeIcon icon={faCircleInfo} style={{ width: "20px" }} fade /> 
-		       			 		</button>
-		       			 		</div>
-		        </div>	
-			</div>
-				
-		</div>
+	<div id="home-section">
+	  <div id="search-logo"> 
+	    <Link href="/">
+	      <span className="symbol">
+	        <img src="https://raw.githubusercontent.com/jonkiky/edu/master/public/images/logo.png" alt="" />
+	      </span>
+	    </Link>
+	    <span className="home-header-title">
+	    	Kids Activites Hub
+	    </span>
+	  </div>
+<div className="home-content">
+	    <div className="home-search-input">
+	    	<h1>Exploring Little Ones' Talents</h1>
+	      <p>We believe that every child is unique, with a world of 
+talents waiting to be discovered. Our mission is to empower
+ parents, teachers, and guardians in recognizing and 
+nurturing these talents from an early age. </p>
+	    </div>
+	    <div className="button-group">
+		    <button  onClick={()=>handleClick("explore")} >Find The Talents </button>
+		    <button  onClick={()=>handleClick("explore")} > Explore Activites Hub</button>
+		   </div>
+	</div>
+</div>
   );
 }
