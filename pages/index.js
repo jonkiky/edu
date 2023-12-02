@@ -155,27 +155,27 @@ export default function Search() {
 		       			 			<ul>
 		       			 				<li>
 		       			 						<input type="checkbox" id="age-3" value="age-3" 	onChange={(e)=>toggleCheckBoxStatus(e, "age-3")} />
-		       			 						<label htmlFor="age-3"> Older than 3</label>
+		       			 						<label htmlFor="age-3"> 0 to 3 years</label>
 		       			 				</li>
 		       			 				<li>
 		       			 					<input type="checkbox" id="age-4" value="age-4" 	onChange={(e)=>toggleCheckBoxStatus(e, "age-4")} />
-		       			 						<label htmlFor="age-4"> Older than 4</label>
+		       			 						<label htmlFor="age-4"> 3 to 4 years</label>
 		       			 				</li>
 		       			 				<li>
 		       			 						<input type="checkbox" id="age-5" value="age-5" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-5")} />
-		       			 						<label htmlFor="age-5">Older than 5</label></li>
+		       			 						<label htmlFor="age-5">4 to 5 years</label></li>
 		       			 				<li>
 		       			 						<input type="checkbox" id="age-6" value="age-6" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-6")} />
-		       			 						<label htmlFor="age-6">Older than 6</label>
+		       			 						<label htmlFor="age-6">5 to 6 years </label>
 		       			 				</li>
 		       			 				<li>
 		       			 						<input type="checkbox" id="age-7" value="age-7" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-7")} />
-		       			 						<label htmlFor="age-7">Older than 7</label>
+		       			 						<label htmlFor="age-7">6 to 7 years</label>
 		       			 				</li>
 		       			 				<li> 	<input type="checkbox" id="age-8" value="age-8" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-8")} />
-		       			 						<label htmlFor="age-8">Older than 8</label></li>
+		       			 						<label htmlFor="age-8">7 to 8 years</label></li>
 		       			 						<li> 	<input type="checkbox" id="age-9" value="age-9" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-9")} />
-		       			 						<label htmlFor="age-9">Older than 9 </label></li>
+		       			 						<label htmlFor="age-9">older than 8 </label></li>
 		       			 			</ul>
 		       			 		</div>
 		       			 </div>
