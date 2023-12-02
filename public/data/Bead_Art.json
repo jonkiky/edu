@@ -24,6 +24,7 @@
         },
         {
             "title": "Prestigious Exhibitions and Workshops",
+            "hide": true,
             "system": "please use html <p>, <ul> tag to style your response. all the link should be open in a new tag using target _blank property",
             "desc": "List key competitions you may be interested in.",
             "query": "we are looking for the information related to the involve in an activity of Bead Art, you need to provide at least 5 key competitions that are USA-based or international for juniors who like Bead Art. Please categorize them by age, provide the link, plus a brief description, mention when the contest usually happens during the year, and put them in an HTML ul li list. In the end, provide a way to find related competitions or shows.",

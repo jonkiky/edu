@@ -29,15 +29,15 @@ export const data = [
             "age-9",
            "s-spring", "s-summer", "s-fall","s-winter", 
            "c-$", 
-           "mi-methematical"],
+           "mi-methematical","mi-intrapersonal"],
         "cate": "mi-methematical"
     },
     {
         "name": "Archery",
         "desc": "",
-        "tags": ["age-6", "age-7", "age-8", "age-9",  
+        "tags": ["age-9",  
             "s-spring", "s-summer", "s-fall", "c-$$","s-winter",
-                 "mi-bodily-kinesthetic", "olympics"],
+                 "mi-bodily-kinesthetic", "olympics","mi-intrapersonal"],
         "cate": "mi-bodily-kinesthetic"
     },
     {
