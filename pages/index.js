@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSliders, faCircleInfo } from '@fortawesome/free-solid-svg-icons'
+import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import Header from "../components/header";
 import {data} from "../config/search_cate";
 import SelectSearch from 'react-select-search';
@@ -129,6 +130,11 @@ export default function Search() {
 														<p>{cate[i].desc}</p>
 													</div>
 												</a>
+												<div>
+													<button className="likeBtn">
+														<FontAwesomeIcon icon={faHeart} />
+													</button>
+												</div>
 										</article>);
 			  				
 			  		}
