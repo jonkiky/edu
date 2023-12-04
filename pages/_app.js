@@ -43,7 +43,9 @@ const App = ({ Component, pageProps }) => {
           gtag('config', 'G-732B6BF2S5');
         `}
       </script>
-       <title>Kid Activities Hub</title>
+       <title>
+        KIDDIE DISCOVERY
+       </title>
       </Head>
       <div className="wrapper">
         <Component {...pageProps} />
