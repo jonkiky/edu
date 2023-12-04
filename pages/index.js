@@ -268,7 +268,7 @@ export default function Search() {
 									 { getList()}
 							</section>
 							<div id="ads">
-								<h2>Activities Hub</h2>
+								<h2>Kiddie Discovery</h2>
 								<p>We aim to help children in discovering their interests and passions while providing parents with 
 								guidance on nurturing hobbies that can help 
 								their children excel in a particular field.</p>
