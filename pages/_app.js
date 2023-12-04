@@ -35,7 +35,7 @@ const App = ({ Component, pageProps }) => {
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
       />
-      <script>
+      <script type="text/javascript">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
