@@ -123,7 +123,7 @@ const search = (terms)=>{
 
 						 		<Link href="/">
 						 			<span className="title">
-								   <h2>Activities Hub</h2>
+								   <h2>Kiddie Discovery</h2>
 								  </span>
 								</Link>
 								<span className="search-input">

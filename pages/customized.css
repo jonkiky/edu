@@ -3,6 +3,7 @@
 }
 
 
+
 #solution {
 	position: relative;
 	color: #000;
@@ -789,8 +790,70 @@ line-height: normal;
    
 }
 
+.asterisk{
+	color:  red;
+}
+
+.signup-form {
+    max-width: 960px;
+    padding: 25px 5px;
+    width: 100%;
+    margin: 80px auto;
+    flex-direction: row;
+    position: relative;
+    display: flex;
+}
+
+.signup-img{
+	width: 40%;
+}
+.signup-img img{
+	width: 100%;
+	padding: 10px 20px;
+}
+
+div#mc_embed_signup {
+    width: 50%;
+    padding: 5px 10px 0 0px;
+}
+
+.optionalParent p{
+	font-weight: 600;
+    text-align: center;
+}
+input#mc-embedded-subscribe {
+    margin: 12px 0;
+    padding: 10px 0px;
+    width: 100%;
+    border-radius: 4px;
+    color: white;
+    background: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#mc_embed_signup_scroll h1{
+	text-decoration: none;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin: 0 0 0.5em 0;
+}
 
 @media screen and (max-width: 480px) {
+
+	.signup-img{
+		display: none;
+	}
+
+	div#mc_embed_signup {
+	    width: 100%;
+	    padding: 20px;
+	    border: 1px solid;
+	    border-radius: 20px;
+	    margin: 5px;
+	}
+
+
     .questions-right {
         width: 100%;
         position: relative;
@@ -853,4 +916,8 @@ line-height: normal;
     	font-size: 24px;
     }
 }	
+
+
+
+
 
