@@ -287,6 +287,44 @@ line-height: normal;
 	font-size: 17px;
 }
 
+.disListIcon {
+    visibility: hidden;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+
+}
+
+
+/* Make the element visible when the parent is hovered */
+.likedItem:hover .disListIcon {
+  visibility: visible;
+}
+
+
+.collected-items {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    margin-top: 10px;
+    max-height: 230px;
+    overflow-y: scroll;
+    box-sizing: content-box;											
+}
+
+.likedItem img{
+	width: 100%;
+	max-width: 100%;
+	border-radius: 10px;
+}
+
+.likedItem{
+	width: 100%;
+	margin: 0;
+	position: relative;
+	max-width: 78px;
+}
 
 .search-input{
 	margin-left: 10px;
@@ -402,7 +440,15 @@ line-height: normal;
 #mobile-facetsearch{
 	display: none;
 }
-
+.disLikeBtn {
+	width: 15px;
+    height: 15px;
+    background: transparent;
+    border-radius: 7px;
+    padding-top: 4px;
+    border: none;
+    cursor: pointer;
+}
 
 .likeBtn {
 	width: 30px;
@@ -433,6 +479,13 @@ line-height: normal;
 
 .likeBtn svg{
 	color: black;
+}
+
+@media screen and (max-width: 980px) {
+	
+	#ads { 
+	  display: none;
+	}
 }
 @media screen and (max-width: 480px) {
 

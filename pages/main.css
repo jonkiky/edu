@@ -2567,7 +2567,7 @@ input, select, textarea {
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			position: relative;
 			width: calc(25% - 1.25em);
-			margin: 1.25em 0 0 1.25em;
+			margin: 3em 0 0 1.25em;
 			height: fit-content;
 		}
 
