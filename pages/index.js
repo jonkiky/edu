@@ -10,7 +10,7 @@ import {data} from "../config/search_cate";
 import SelectSearch from 'react-select-search';
 import 'react-select-search/style.css'
 
-export default function Search() {
+export default function Index() {
 	 // Use a check to determine if localStorage is available
   const isLocalStorageAvailable = typeof localStorage !== 'undefined';
   const router = useRouter();
@@ -126,16 +126,16 @@ export default function Search() {
 			setCate(filter(data,updatedTags))
   };
 
-const handleLikeBtn=(e)=>{
-	const likedActive = e.currentTarget.dataset.customproperty;
-	let newLikeList = [...likeList];
-	if (!newLikeList.includes(likedActive)) {
-	  newLikeList.push(likedActive);
-	}else{
-		newLikeList=newLikeList.filter(item => item !== likedActive);
+	const handleLikeBtn=(e)=>{
+		const likedActive = e.currentTarget.dataset.customproperty;
+		let newLikeList = [...likeList];
+		if (!newLikeList.includes(likedActive)) {
+		  newLikeList.push(likedActive);
+		}else{
+			newLikeList=newLikeList.filter(item => item !== likedActive);
+		}
+		updateLiskList(newLikeList);
 	}
-	updateLiskList(newLikeList);
-}
 
 
   const getLikedList =()=>{
@@ -148,7 +148,7 @@ const handleLikeBtn=(e)=>{
 		  		if (likeList.includes(cate[i].name)) {
 				if(cate[i].ispublic){
 							  			list.push(
-							  				<div className="likedItem">
+							  				<div className="likedItem" key={"liked_"+cate[i].name}>
 																<a href={hrefLink} target="_self" >
 																	<span className="likedItemImage">
 																	<img src={img} alt="" />
@@ -168,8 +168,6 @@ const handleLikeBtn=(e)=>{
 		  		return list;
 		  }
 
-
-
   const getList =()=>{
   		let list = []
 		  for (var i = cate.length - 1; i >= 0; i--) {
@@ -184,7 +182,7 @@ const handleLikeBtn=(e)=>{
 
 		  		if(cate[i].ispublic){
 			  			list.push(
-			  				<article className="style1">
+			  				<article className="style1" key={"list_"+cate[i].name}>
 												<span className="image">
 													<img src={img} alt="" />
 												</span>
@@ -347,7 +345,7 @@ const handleLikeBtn=(e)=>{
 									<li>	<Link href="/use">Terms of Service</Link></li>
 									<li>	<Link href="/policy">Privacy Policy</Link></li>
 								</ul>
-								<div class="line"></div>
+								<div className="line"></div>
 								<br/>
 								<div className="collection">
 									<p> Collection </p>

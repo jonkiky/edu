@@ -114,6 +114,9 @@ const search = (terms)=>{
 }
   return (
 				 	<header>
+				 			<div>
+				 			System is under developmenet
+				 			</div>
 						 	<div id="search-logo"> 
 						 		<Link href="/">
 									<span className="symbol">
