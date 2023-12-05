@@ -412,6 +412,22 @@ line-height: normal;
     border-radius: 7px;
     padding-top: 4px;
     border: 1px solid #ececec;
+    cursor: pointer;
+}
+
+.likeBtnGroup{
+	z-index: 99;
+	position: absolute;
+	width: 100%;
+}
+
+.likeBtnGroup span {
+    text-align: right;
+    float: right;
+    margin-right: 10px;
+    margin-top: 9px;
+    color: #666;
+    font-size: 13px;
 }
 
 

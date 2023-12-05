@@ -3,8 +3,8 @@ import { useRouter } from 'next/router';
 import Image from 'next/image'; 
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSliders, faCircleInfo } from '@fortawesome/free-solid-svg-icons'
-import { faHeart } from '@fortawesome/free-regular-svg-icons'
+import { faSliders, faCircleInfo ,faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons'
+import { faHeart as faHeartReg } from '@fortawesome/free-regular-svg-icons'
 import Header from "../components/header";
 import {data} from "../config/search_cate";
 import SelectSearch from 'react-select-search';
@@ -12,12 +12,29 @@ import 'react-select-search/style.css'
 
 export default function Search() {
 
+	 // Use a check to determine if localStorage is available
+  const isLocalStorageAvailable = typeof localStorage !== 'undefined';
+
   const router = useRouter();
   const [cate, setCate] = useState([]);
   const [tags, setTags] = useState([]);
 	const [checkboxStatus, setCheckboxStatus] = useState(Array.from(22,() => false));
 	const [filterVisible, setFilterVisible] = useState(false);
-	
+	const [likeList, setLikeList] = useState(() => {
+		if (isLocalStorageAvailable) {
+      const likeList = localStorage.getItem('likeList');
+    	return  likeList ? likeList.split(',') : [];
+    } else {
+      return []; // Fallback if localStorage is not available
+    }
+  });
+
+	const updateLiskList =(newLikeList)=>{
+		if(isLocalStorageAvailable){
+   			localStorage.setItem('likeList', newLikeList);
+    }
+   setLikeList(newLikeList);
+	}
 	useEffect(() => {
    setCate(filter(data,tags))
   }, [data,tags]);
@@ -79,7 +96,6 @@ export default function Search() {
 							}
 					}
 			}
-
 		if(age_flag>=0 && mi_flag>=0 && cost_flag>=0 && season_flag >=0){
 			addProperty={ispublic: true};
 		}
@@ -94,7 +110,6 @@ export default function Search() {
 	  }
 	  return arr;
 	}
-
 
 	function removeTag(arr, tag){
 		return arr.filter(obj => obj!== tag);
@@ -113,11 +128,27 @@ export default function Search() {
 			setCate(filter(data,updatedTags))
   };
 
-  function getList(){
+const handleLikeBtn=(e)=>{
+	const likedActive = e.currentTarget.dataset.customproperty;
+	let newLikeList = [...likeList];
+	if (!newLikeList.includes(likedActive)) {
+	  newLikeList.push(likedActive);
+	}else{
+		newLikeList=newLikeList.filter(item => item !== likedActive);
+	}
+	updateLiskList(newLikeList);
+}
+
+
+  const getList =()=>{
   		let list = []
 		  for (var i = cate.length - 1; i >= 0; i--) {
 		  		let hrefLink = "/content/"+cate[i].name;
 		  		let img = "/images/"+cate[i].name.replace(/ /g, "_")+".png";
+		  		let likeIcon = <FontAwesomeIcon icon={faHeartReg} />
+		  		if (likeList.includes(cate[i].name)) {
+					  likeIcon =<FontAwesomeIcon icon={faHeartSolid} style={{ color: '#FF90BC' }}/>
+					}
 		  		if(cate[i].ispublic){
 			  			list.push(
 			  				<article className="style1">
@@ -125,15 +156,14 @@ export default function Search() {
 													<img src={img} alt="" />
 												</span>
 												<a href={hrefLink} target="_self" >
-													<h2>{cate[i].name}</h2>
 													<div className="content">
-														<p>{cate[i].desc}</p>
 													</div>
 												</a>
-												<div>
-													<button className="likeBtn">
-														<FontAwesomeIcon icon={faHeart} />
+												<div className="likeBtnGroup">
+													<button className="likeBtn" data-customproperty={cate[i].name} onClick={(e)=>handleLikeBtn(e)} >
+														{likeIcon}
 													</button>
+													<span>{cate[i].name}</span>
 												</div>
 										</article>);
 			  				
@@ -147,7 +177,6 @@ export default function Search() {
 		  		}
 		  		return list;
 		  }
-
 
   return (
   	<div id="search-page">
