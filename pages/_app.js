@@ -20,7 +20,6 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        {/* responsive meta */}
        <meta charSet="utf-8" />
        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900" />
@@ -35,14 +34,9 @@ const App = ({ Component, pageProps }) => {
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
       />
-      <script type="text/javascript">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-732B6BF2S5');
-        `}
-      </script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-732B6BF2S5"/>
+      <script type="text/javascript" src="/google_analysis.js" />
+      
        <title>
         KIDDIE DISCOVERY
        </title>
