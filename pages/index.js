@@ -7,6 +7,7 @@ import { faSliders, faCircleInfo ,faHeart as faHeartSolid ,faCircleXmark } from 
 import { faHeart as faHeartReg} from '@fortawesome/free-regular-svg-icons'
 import Header from "../components/header";
 import {data} from "../config/search_cate";
+import SideInfoSection from "../components/SideInfoSection"
 import SelectSearch from 'react-select-search';
 import 'react-select-search/style.css'
 
@@ -201,8 +202,6 @@ export default function Index() {
 			  		}
 		  		}
 
-
-
 		  		if(list.length==0){
 		  			list = 	[<article className="nofound">
 												No result
@@ -335,25 +334,7 @@ export default function Index() {
 							<section className="tiles">
 									 { getList()}
 							</section>
-							<div id="ads">
-								<h2>Kiddie Discovery</h2>
-								<p>We aim to help children in discovering their interests and passions while providing parents with 
-								guidance on nurturing hobbies that can help 
-								their children excel in a particular field.</p>
-								<ul>
-									<li>	<Link href="/about">About Us</Link></li>
-									<li>	<Link href="/use">Terms of Service</Link></li>
-									<li>	<Link href="/policy">Privacy Policy</Link></li>
-								</ul>
-								<div className="line"></div>
-								<br/>
-								<div className="collection">
-									<p> Collection </p>
-										<div className="collected-items">
-											{getLikedList()}
-										</div>
-								</div>
-							</div>
+							<SideInfoSection handleLikeBtn={handleLikeBtn} likeList={likeList} cate={cate}/>
 						</div>
 
 						<div id="mobile-facetsearch">

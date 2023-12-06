@@ -34,6 +34,7 @@ const App = ({ Component, pageProps }) => {
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
       />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-732B6BF2S5"/>
       <script type="text/javascript" src="/google_analysis.js" />
       
        <title>
