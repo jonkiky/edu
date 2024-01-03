@@ -7,7 +7,7 @@ import { faSliders, faCircleInfo ,faHeart as faHeartSolid ,faCircleXmark } from 
 import { faHeart as faHeartReg} from '@fortawesome/free-regular-svg-icons'
 import Header from "../components/header";
 import {data} from "../config/search_cate";
-import SideInfoSection from "../components/SideInfoSection"
+import SideInfoSection from "../components/sideInfoSection"
 import SelectSearch from 'react-select-search';
 import 'react-select-search/style.css'
 
