@@ -119,16 +119,7 @@ export const data = [
 //              "mi-bodily-kinesthetic","mi-intrapersonal"],
 //         "cate": "mi-musical"
 //     },
-//     {
-//         "name": "Basketball",
-//         "desc": "",
-//         "tags": [
-//            "age-5","age-6","age-7", "age-8", "age-9", 
-//            "s-spring", "s-summer", "s-fall","s-winter",
-//            "c-$",
-//              "mi-bodily-kinesthetic","mi-interpersonal"],
-//         "cate": "mi-bodily-kinesthetic"
-//     },
+
 //     {
 //         "name": "Beach Volleyball",
 //         "desc": "",
@@ -903,107 +894,107 @@ export const data = [
 //          "mi-visual",],
 //         "cate":  "mi-visual"
 //     },
-//      {
-//         "name": "Ping Pong",
-//         "desc": "",
-//         "tags": [
-//          "age-5", "age-6", "age-7","age-8", "age-9", 
-//          "s-spring","s-summer", "s-fall","s-winter",
-//            "c-$",
-//          "mi-bodily-kinesthetic", "mi-naturalistic"],
-//         "cate":  "mi-naturalistic"
-//     },
-//      {
-//         "name": "Sport Climbing",
-//         "desc": "",
-//         "tags": [
-//          "age-7","age-8", "age-9", 
-//          "s-spring","s-summer", "s-fall","s-winter",
-//            "c-$$",
-//          "mi-bodily-kinesthetic", ],
-//         "cate":  "mi-naturalistic"
-//     },
-//     {
-//         "name": "Swimming",
-//         "desc": "",
-//         "tags": [
-//          "age-3","age-4","age-5","age-6","age-7", "age-8", "age-9", 
-//          "s-spring","s-summer", "s-fall","s-winter",
-//            "c-$",
-//          "mi-bodily-kinesthetic", ],
-//         "cate":   "mi-bodily-kinesthetic",
-//     },
-//      {
-//         "name": "Tennis",
-//         "desc": "",
-//         "tags": [
-//          "age-5","age-6","age-7", "age-8", "age-9", 
-//          "s-spring","s-summer", "s-fall","s-winter",
-//            "c-$",
-//          "mi-bodily-kinesthetic", ],
-//         "cate":   "mi-bodily-kinesthetic",
-//     },
-//         {
-//         "name": "Girl_Group",
-//         "desc": "",
-//         "tags": [
-//         "age-6","age-7", "age-8", "age-9", 
-//          "s-spring","s-summer", "s-fall","s-winter",
-//            "c-$$",
-//          "mi-musical", "mi-intrapersonal","mi-interpersonal", ],
-//         "cate":   "mi-musical",
-//     },
-// {
-//         "name": "Bowling",
-//         "desc": "",
-//         "tags": [
-//         "age-5","age-6","age-7", "age-8", "age-9", 
-//          "s-spring","s-summer", "s-fall","s-winter",
-//            "c-$$",
-//          "mi-musical", "mi-intrapersonal","mi-interpersonal", ],
-//         "cate":   "mi-musical",
-//     },
-//     {
-//         "name": "American Football",
-//         "desc": "",
-//         "tags": [
-//         "age-5","age-6","age-7", "age-8", "age-9", 
-//         "s-fall",
-//            "c-$$",
-//          "mi-bodily-kinesthetic","mi-interpersonal", ],
-//         "cate":   "mi-bodily-kinesthetic",
-//     },
-//      {
-//         "name": "Lacrosse",
-//         "desc": "",
-//         "tags": [
-//         "age-6","age-7", "age-8", "age-9", 
-//         "s-spring","s-summer","s-fall",
-//            "c-$$",
-//          "mi-bodily-kinesthetic","mi-interpersonal","mi-intrapersonal", ],
-//         "cate":   "mi-bodily-kinesthetic",
-//     },
-//       {
-//         "name": "Rifle",
-//         "desc": "",
-//         "tags": [
-//        "age-9", 
-//         "s-spring","s-summer","s-fall","s-winter",
-//            "c-$$$",
-//          "mi-bodily-kinesthetic","mi-intrapersonal", ],
-//         "cate":   "mi-bodily-kinesthetic",
-//     },
-//      {
-//         "name": "Taekwondo_Sport",
-//         "desc": "",
-//         "tags": [
-//        "age-9", 
-//         "s-spring","s-summer","s-fall","s-winter",
-//            "c-$$",
-//          "mi-bodily-kinesthetic","mi-intrapersonal", ],
-//         "cate":   "mi-bodily-kinesthetic",
-//     },
-   {
+     {
+        "name": "Ping Pong",
+        "desc": "",
+        "tags": [
+         "age-5", "age-6", "age-7","age-8", "age-9", 
+         "s-spring","s-summer", "s-fall","s-winter",
+           "c-$",
+         "mi-bodily-kinesthetic", "mi-naturalistic"],
+        "cate":  "mi-naturalistic"
+    },
+     {
+        "name": "Sport Climbing",
+        "desc": "",
+        "tags": [
+         "age-7","age-8", "age-9", 
+         "s-spring","s-summer", "s-fall","s-winter",
+           "c-$$",
+         "mi-bodily-kinesthetic", ],
+        "cate":  "mi-naturalistic"
+    },
+    {
+        "name": "Swimming",
+        "desc": "",
+        "tags": [
+         "age-3","age-4","age-5","age-6","age-7", "age-8", "age-9", 
+         "s-spring","s-summer", "s-fall","s-winter",
+           "c-$",
+         "mi-bodily-kinesthetic", ],
+        "cate":   "mi-bodily-kinesthetic",
+    },
+     {
+        "name": "Tennis",
+        "desc": "",
+        "tags": [
+         "age-5","age-6","age-7", "age-8", "age-9", 
+         "s-spring","s-summer", "s-fall","s-winter",
+           "c-$",
+         "mi-bodily-kinesthetic", ],
+        "cate":   "mi-bodily-kinesthetic",
+    },
+        {
+        "name": "Girl_Group",
+        "desc": "",
+        "tags": [
+        "age-6","age-7", "age-8", "age-9", 
+         "s-spring","s-summer", "s-fall","s-winter",
+           "c-$$",
+         "mi-musical", "mi-intrapersonal","mi-interpersonal", ],
+        "cate":   "mi-musical",
+    },
+{
+        "name": "Bowling",
+        "desc": "",
+        "tags": [
+        "age-5","age-6","age-7", "age-8", "age-9", 
+         "s-spring","s-summer", "s-fall","s-winter",
+           "c-$$",
+         "mi-musical", "mi-intrapersonal","mi-interpersonal", ],
+        "cate":   "mi-musical",
+    },
+    {
+        "name": "American Football",
+        "desc": "",
+        "tags": [
+        "age-5","age-6","age-7", "age-8", "age-9", 
+        "s-fall",
+           "c-$$",
+         "mi-bodily-kinesthetic","mi-interpersonal", ],
+        "cate":   "mi-bodily-kinesthetic",
+    },
+     {
+        "name": "Lacrosse",
+        "desc": "",
+        "tags": [
+        "age-6","age-7", "age-8", "age-9", 
+        "s-spring","s-summer","s-fall",
+           "c-$$",
+         "mi-bodily-kinesthetic","mi-interpersonal","mi-intrapersonal", ],
+        "cate":   "mi-bodily-kinesthetic",
+    },
+      {
+        "name": "Rifle",
+        "desc": "",
+        "tags": [
+       "age-9", 
+        "s-spring","s-summer","s-fall","s-winter",
+           "c-$$$",
+         "mi-bodily-kinesthetic","mi-intrapersonal", ],
+        "cate":   "mi-bodily-kinesthetic",
+    },
+     {
+        "name": "Taekwondo_Sport",
+        "desc": "",
+        "tags": [
+       "age-9", 
+        "s-spring","s-summer","s-fall","s-winter",
+           "c-$$",
+         "mi-bodily-kinesthetic","mi-intrapersonal", ],
+        "cate":   "mi-bodily-kinesthetic",
+    },
+{
         "name": "Figure Skating",
         "desc": "",
         "tags": [
@@ -1012,5 +1003,16 @@ export const data = [
            "c-$$",
          "mi-bodily-kinesthetic","mi-intrapersonal", ],
         "cate":   "mi-bodily-kinesthetic",
-    }
+    },
+        {
+        "name": "Basketball",
+        "desc": "",
+        "tags": [
+           "age-5","age-6","age-7", "age-8", "age-9", 
+           "s-spring", "s-summer", "s-fall","s-winter",
+           "c-$",
+             "mi-bodily-kinesthetic","mi-interpersonal"],
+        "cate": "mi-bodily-kinesthetic"
+    },
+  
 ]
