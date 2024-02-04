@@ -130,7 +130,7 @@ const search = (terms)=>{
 										<SelectSearch 
 										options={options}  
 										name="activities"
-										placeholder="Find Activity" 
+										placeholder="Find A Development Pathway" 
 										emptyMessage =" No thing founded"
 										search
 										onChange= {(term)=>search(term)}/>

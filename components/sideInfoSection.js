@@ -43,11 +43,14 @@ export default function SideInfoSection(handleLikeBtn, likeList,cate =[]) {
 
   return (
   	<div id="ads">
-								<h2>Kiddie Discovery</h2>
-								<p>We aim to help children in discovering their interests and passions while providing parents with 
-								guidance on nurturing hobbies that can help 
-								their children excel in a particular field.</p>
-								<ul>
+							<h2 className="side-title">Development Pathways</h2>
+									<p>Embark on a journey of growth and discovery with Bright Futures Pathways,
+									 where every child's potential is limitless. 
+									 Our platform is dedicated to guiding and nurturing 
+									 young minds through their developmental stages. 
+									 We believe in creating a world where kids can
+									  explore, learn, and thrive at their own pace.</p>
+										<ul>
 									<li>	<Link href="/about">About Us</Link></li>
 									<li>	<Link href="/use">Terms of Service</Link></li>
 									<li>	<Link href="/policy">Privacy Policy</Link></li>
