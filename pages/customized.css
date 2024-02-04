@@ -614,6 +614,20 @@ line-height: normal;
 	margin: auto;
 	
 }
+
+.back-btn{
+	background: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+.age-icon{
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center !important;
+    border-radius: 50%;
+}
 .hero-image{
 	max-height: 450px;
 	max-width: 1440px;

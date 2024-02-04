@@ -55,6 +55,7 @@ export default function SideInfoSection(handleLikeBtn, likeList,cate =[]) {
 									<li>	<Link href="/use">Terms of Service</Link></li>
 									<li>	<Link href="/policy">Privacy Policy</Link></li>
 								</ul>
+								
 								<div className="line"></div>
 								<br/>
 								<div className="collection">

@@ -100,6 +100,11 @@ const [data, setData] = useState([]);
 										<li>	<Link href="/use">Terms of Service</Link></li>
 										<li>	<Link href="/policy">Privacy Policy</Link></li>
 									</ul>
+
+									<div className="line"></div>
+									<br/>
+									<Link href="/explorer" className="back-btn">Back to program list</Link>
+									<br/>
 								</div>
 					</div>
 			</div>

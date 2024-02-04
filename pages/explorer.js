@@ -195,7 +195,9 @@ export default function Index() {
 													<button className="likeBtn" data-customproperty={cate[i].name} onClick={(e)=>handleLikeBtn(e)} >
 														{likeIcon}
 													</button>
+														<span className="age-icon"> | Start Age {cate[i].age}</span>
 													<span>{cate[i].name}</span>
+													
 												</div>
 										</article>);
 			  				
@@ -256,25 +258,9 @@ export default function Index() {
 		       			 						<label htmlFor="mi-body">Bodily Kinesthetic</label>
 		       			 						 </li>
 		       			 				<li>
-		       			 				<input type="checkbox" id="mi-interpersonal" value="mi-interpersonal" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-interpersonal")} />
-		       			 						<label htmlFor="mi-interpersonal">Interpersonal</label>
-		       			 						 </li>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-vl" value="mi-linguistic" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-linguistic")} />
-		       			 						<label htmlFor="mi-vl">Verbal Linguistic</label>
-		       			 						</li>
-		       			 				<li>
 		       			 				<input type="checkbox" id="mi-lm" value="mi-methematical" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-methematical")} />
 		       			 						<label htmlFor="mi-lm">Logical Methematical</label>
 		       			 				</li>
-		       			 				<li>
-		       			 					<input type="checkbox" id="mi-na" value="mi-naturalistic" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-naturalistic")} />
-		       			 						<label htmlFor="mi-na">Naturalistic</label>
-		       			 						</li>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-intrapersonal" value="mi-intrapersonal"  	onChange={(e)=>toggleCheckBoxStatus(e,"mi-intrapersonal")}/>
-		       			 						<label htmlFor="mi-intrapersonal">Intrapersonal</label>
-		       			 						</li>
 		       			 				<li>
 		       			 				<input type="checkbox" id="mi-vs" value="mi-visual" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-visual")} />
 		       			 						<label htmlFor="mi-vs">Visual Spatial</label>
