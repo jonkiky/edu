@@ -1,357 +1,285 @@
-import { useState,useEffect, useRef,createRef } from 'react';
-import { useRouter } from 'next/router';
-import Image from 'next/image'; 
-import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSliders, faCircleInfo ,faHeart as faHeartSolid ,faCircleXmark } from '@fortawesome/free-solid-svg-icons'
-import { faHeart as faHeartReg} from '@fortawesome/free-regular-svg-icons'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react';
+import { InfinitySpin } from 'react-loader-spinner';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Header from "../components/header";
-import {data} from "../config/search_cate";
-import SideInfoSection from "../components/sideInfoSection"
-import SelectSearch from 'react-select-search';
-import 'react-select-search/style.css'
+import Footer from "../components/footer";
+import Link from 'next/link';
 
-export default function Index() {
-	 // Use a check to determine if localStorage is available
-  const isLocalStorageAvailable = typeof localStorage !== 'undefined';
+
+const TabsComponent = ()=> (
+  <Tabs>
+    <TabList>
+      <Tab>Bodily Kinesthetic</Tab>
+      <Tab>Visual Spatial</Tab>
+      <Tab>Musical</Tab>
+      <Tab>Mathematical</Tab>
+      <Tab>Verbal  Linguistic</Tab>
+    </TabList>
+
+    <TabPanel>
+        <section class="home-tiles">
+        
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Gymnastics.png" alt="" />
+				</span>
+				<a href="/content/Gymnastics" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Archery.png" alt="" />
+				</span>
+				<a href="/content/Archery" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Golf.png" alt="" />
+				</span>
+				<a href="/content/Golf" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Fencing.png" alt="" />
+				</span>
+				<a href="/content/Fencing" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+        </section>
+    </TabPanel>
+    <TabPanel>
+      <section class="home-tiles">
+        
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Film_Maker.png" alt="" />
+				</span>
+				<a href="/content/Film Maker" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Photographer.png" alt="" />
+				</span>
+				<a href="/content/Photographer" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Photographer.png" alt="" />
+				</span>
+				<a href="/content/Photographer" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Photographer.png" alt="" />
+				</span>
+				<a href="/content/Photographer" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+        </section>
+    </TabPanel>
+    <TabPanel>
+     <section class="home-tiles">
+        
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Accordion.png" alt="" />
+				</span>
+				<a href="/content/Accordion" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Basketball.png" alt="" />
+				</span>
+				<a href="/content/Basketball" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Basketball.png" alt="" />
+				</span>
+				<a href="/content/Basketball" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Basketball.png" alt="" />
+				</span>
+				<a href="/content/Basketball" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+        </section>
+    </TabPanel>
+    <TabPanel>
+      <section class="home-tiles">
+        	
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Basketball.png" alt="" />
+				</span>
+				<a href="/content/Basketball" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Basketball.png" alt="" />
+				</span>
+				<a href="/content/Basketball" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Basketball.png" alt="" />
+				</span>
+				<a href="/content/Basketball" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Basketball.png" alt="" />
+				</span>
+				<a href="/content/Basketball" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+        </section>
+    </TabPanel>
+    <TabPanel>
+      <section class="home-tiles">
+        	
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Basketball.png" alt="" />
+				</span>
+				<a href="/content/Basketball" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Basketball.png" alt="" />
+				</span>
+				<a href="/content/Basketball" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Basketball.png" alt="" />
+				</span>
+				<a href="/content/Basketball" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+			<article class="style1">
+				<span class="image">
+					<img src="/images/Basketball.png" alt="" />
+				</span>
+				<a href="/content/Basketball" target="_self">
+			        <div class="content"></div>
+			    </a>
+			</article>
+        </section>
+    </TabPanel>
+  </Tabs>
+);
+
+
+
+export default function HomePage() {
   const router = useRouter();
-  const [cate, setCate] = useState([]);
-  const [tags, setTags] = useState([]);
-	const [checkboxStatus, setCheckboxStatus] = useState(Array.from(22,() => false));
-	const [filterVisible, setFilterVisible] = useState(false);
-	const [likeList, setLikeList] = useState(() => {
-		if (isLocalStorageAvailable) {
-      const likeList = localStorage.getItem('likeList');
-    	return  likeList ? likeList.split(',') : [];
-    } else {
-      return []; // Fallback if localStorage is not available
-    }
-  });
-
-  const [likedItems, setLikedItems] = useState();
-
-	const updateLiskList =(newLikeList)=>{
-		if(isLocalStorageAvailable){
-   			localStorage.setItem('likeList', newLikeList);
-    }
-   setLikeList(newLikeList);
-	}
-
-	useEffect(() => {
-   setCate(filter(data,tags))
-  }, [data,tags]);
-
- const handleMobileClick = (tag) => {
-  	if(tag == "filter"){
-  		setFilterVisible(!filterVisible);
-  	}
-  	if(tag == "about"){
-  		router.push('/about');
-  	}
+  const handleLikeBtn=()=>{
+    router.push('/explorer');
   }
 
-	function filter(data=[],tags=[]){
-		let transferedData = data.map((d) =>{
-	 	let addProperty ={ispublic: false};
-	 		let age_flag = 0 ;
-			let mi_flag = 0 ;
-			let cost_flag = 0 ;
-			let season_flag = 0 ;
-
-			for (var i = tags.length - 1; i >= 0; i--) {
-					if(tags[i].includes("age-")){
-							if(!age_flag == 1){
-								if(d?.tags?.includes(tags[i])){
-									age_flag=1;
-								}else{
-									age_flag=-1;
-								}
-							}
-					}
-					if(tags[i].includes("mi-")){
-							if(mi_flag !== 1){
-								if(d?.tags?.includes(tags[i])){
-									mi_flag=1;
-								}else{
-									mi_flag=-1;
-								}
-							}
-					}
-					if(tags[i].includes("c-")){
-							if(!cost_flag == 1){
-								if(d?.tags?.includes(tags[i])){
-									cost_flag=1;
-								}else{
-									cost_flag=-1;
-								}
-							}
-					}
-					if(tags[i].includes("s-")){
-							if(!season_flag == 1){
-								if(d?.tags?.includes(tags[i])){
-									season_flag=1;
-								}else{
-									season_flag=-1;
-								}
-							}
-					}
-			}
-		if(age_flag>=0 && mi_flag>=0 && cost_flag>=0 && season_flag >=0){
-			addProperty={ispublic: true};
-		}
-	 	return({ ...d, ...addProperty })
-	 }); 
-		return transferedData;
-	}
-
-	function addTag(arr, tag) {
-	  if (!arr.includes(tag)) {
-	    arr.push(tag); // Add the element to the array
-	  }
-	  return arr;
-	}
-
-	function removeTag(arr, tag){
-		return arr.filter(obj => obj!== tag);
-	}
-
-	const toggleCheckBoxStatus = (event, value) => {
-		let updatedTags = tags
-		if(event?.target?.checked){
-				 updatedTags = addTag(tags,value);
-			
-		}else{
-			   updatedTags = removeTag(tags,value);
-		}
-			setTags(updatedTags);
-			setCate(filter(data,updatedTags))
-  };
-
-	const handleLikeBtn=(e)=>{
-		const likedActive = e.currentTarget.dataset.customproperty;
-		let newLikeList = [...likeList];
-		if (!newLikeList.includes(likedActive)) {
-		  newLikeList.push(likedActive);
-		}else{
-			newLikeList=newLikeList.filter(item => item !== likedActive);
-		}
-		updateLiskList(newLikeList);
-	}
-
-
-  const getLikedList =()=>{
-  		let list = []
-		  for (var i = cate.length - 1; i >= 0; i--) {
-		  		let hrefLink = "/content/"+cate[i].name;
-		  		let img = "/images/"+cate[i].name.replace(/ /g, "_")+".png";
-		  		let likeIcon = <FontAwesomeIcon icon={faHeartReg} />;
-		  		let isLiked = false;
-		  		if (likeList.includes(cate[i].name)) {
-				if(cate[i].ispublic){
-							  			list.push(
-							  				<div className="likedItem" key={"liked_"+cate[i].name}>
-																<a href={hrefLink} target="_self" >
-																	<span className="likedItemImage">
-																	<img src={img} alt="" />
-																</span>
-																</a>
-																<div className="disListIcon">
-																	<button className="disLikeBtn" data-customproperty={cate[i].name} onClick={(e)=>handleLikeBtn(e)} >
-																		<FontAwesomeIcon icon={faCircleXmark} />
-																	</button>
-																</div>
-												</div>);
-							  				
-							  		}
-						  		}
-
-					}
-		  		return list;
-		  }
-
-  const getList =()=>{
-  		let list = []
-		  for (var i = cate.length - 1; i >= 0; i--) {
-		  		let hrefLink = "/content/"+cate[i].name;
-		  		let img = "/images/"+cate[i].name.replace(/ /g, "_")+".png";
-		  		let likeIcon = <FontAwesomeIcon icon={faHeartReg} />;
-		  		let isLiked = false;
-
-		  		if (likeList.includes(cate[i].name)) {
-					  likeIcon =<FontAwesomeIcon icon={faHeartSolid} style={{ color: '#FF90BC' }}/>
-					}
-
-		  		if(cate[i].ispublic){
-			  			list.push(
-			  				<article className="style1" key={"list_"+cate[i].name}>
-												<span className="image">
-													<img src={img} alt="" />
-												</span>
-												<a href={hrefLink} target="_self" >
-													<div className="content">
-													</div>
-												</a>
-												<div className="likeBtnGroup">
-													<button className="likeBtn" data-customproperty={cate[i].name} onClick={(e)=>handleLikeBtn(e)} >
-														{likeIcon}
-													</button>
-													<span>{cate[i].name}</span>
-												</div>
-										</article>);
-			  				
-			  		}
-		  		}
-
-		  		if(list.length==0){
-		  			list = 	[<article className="nofound">
-												No result
-										</article>]
-		  		}
-		  		return list;
-		  }
-
-  return (
-  	<div id="search-page">
-			<div className="search-paper">
-				 	<Header />
-		       <div className="trend-list">
-		       		<div id="facetsearch" className={`filter ${filterVisible ? 'visible' : ''}`}>
-		       			 <div className="filter-section" >
-		       			 		<div className="filter-section-header">Age</div>
-		       			 		<div className="filter-section-options">
-		       			 			<ul>
-		       			 				<li>
-		       			 						<input type="checkbox" id="age-3" value="age-3" 	onChange={(e)=>toggleCheckBoxStatus(e, "age-3")} />
-		       			 						<label htmlFor="age-3"> 0 to 3 years</label>
-		       			 				</li>
-		       			 				<li>
-		       			 					<input type="checkbox" id="age-4" value="age-4" 	onChange={(e)=>toggleCheckBoxStatus(e, "age-4")} />
-		       			 						<label htmlFor="age-4"> 3 to 4 years</label>
-		       			 				</li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="age-5" value="age-5" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-5")} />
-		       			 						<label htmlFor="age-5">4 to 5 years</label></li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="age-6" value="age-6" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-6")} />
-		       			 						<label htmlFor="age-6">5 to 6 years </label>
-		       			 				</li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="age-7" value="age-7" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-7")} />
-		       			 						<label htmlFor="age-7">6 to 7 years</label>
-		       			 				</li>
-		       			 				<li> 	<input type="checkbox" id="age-8" value="age-8" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-8")} />
-		       			 						<label htmlFor="age-8">7 to 8 years</label></li>
-		       			 						<li> 	<input type="checkbox" id="age-9" value="age-9" 	onChange={(e)=>toggleCheckBoxStatus(e,"age-9")} />
-		       			 						<label htmlFor="age-9">older than 8 </label></li>
-		       			 			</ul>
-		       			 		</div>
-		       			 </div>
-		       			 <div className="line"></div>
-		       			  <div className="filter-section" >
-		       			 		<div className="filter-section-header">Multi-intelligence</div>
-		       			 		<div className="filter-section-options">
-		       			 			<ul>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-body" value="mi-bodily-kinesthetic" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-bodily-kinesthetic")} />
-		       			 						<label htmlFor="mi-body">Bodily Kinesthetic</label>
-		       			 						 </li>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-interpersonal" value="mi-interpersonal" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-interpersonal")} />
-		       			 						<label htmlFor="mi-interpersonal">Interpersonal</label>
-		       			 						 </li>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-vl" value="mi-linguistic" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-linguistic")} />
-		       			 						<label htmlFor="mi-vl">Verbal Linguistic</label>
-		       			 						</li>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-lm" value="mi-methematical" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-methematical")} />
-		       			 						<label htmlFor="mi-lm">Logical Methematical</label>
-		       			 				</li>
-		       			 				<li>
-		       			 					<input type="checkbox" id="mi-na" value="mi-naturalistic" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-naturalistic")} />
-		       			 						<label htmlFor="mi-na">Naturalistic</label>
-		       			 						</li>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-intrapersonal" value="mi-intrapersonal"  	onChange={(e)=>toggleCheckBoxStatus(e,"mi-intrapersonal")}/>
-		       			 						<label htmlFor="mi-intrapersonal">Intrapersonal</label>
-		       			 						</li>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-vs" value="mi-visual" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-visual")} />
-		       			 						<label htmlFor="mi-vs">Visual Spatial</label>
-		       			 						</li>
-		       			 				<li>
-		       			 				<input type="checkbox" id="mi-ms" value="mi-musical" 	onChange={(e)=>toggleCheckBoxStatus(e,"mi-musical")} />
-		       			 						<label htmlFor="mi-ms">Musical</label>
-		       			 				</li>
-		       			 			</ul>
-		       			 		</div>
-		       			 </div>
-		       			 <div className="line"></div>
-		       			 <div className="filter-section" >
-		       			 		<div className="filter-section-header">Cost</div>
-		       			 		<div className="filter-section-options">
-		       			 			<ul>
-		       			 				<li>
-		       			 						<input type="checkbox" id="cost1" value="c-$" 	onChange={(e)=>toggleCheckBoxStatus(e,"c-$")} />
-		       			 						<label htmlFor="cost1">$</label>
-		       			 				</li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="cost2" value="c-$$" 	onChange={(e)=>toggleCheckBoxStatus(e,"c-$$")} />
-		       			 						<label htmlFor="cost2">$$</label>
-		       			 				</li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="cost3" value="c-$$$" 	onChange={(e)=>toggleCheckBoxStatus(e,"c-$$$")} />
-		       			 						<label htmlFor="cost3">$$$</label>
-		       			 				</li>
-		       			 			</ul>
-		       			 		</div>
-		       			 </div>
-		       			 <div className="line"></div>
-		       			 <div className="filter-section" >
-		       			 		<div className="filter-section-header">Season</div>
-		       			 		<div className="filter-section-options">
-		       			 			<ul>
-		       			 				<li>
-		       			 						<input type="checkbox" id="spring" value="s-spring" 	onChange={(e)=>toggleCheckBoxStatus(e,"s-spring")} />
-		       			 						<label htmlFor="spring">Spring</label>
-		       			 				</li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="summer" value="s-summer" 	onChange={(e)=>toggleCheckBoxStatus(e,"s-summer")} />
-		       			 						<label htmlFor="summer">Summer</label>
-		       			 				</li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="fall" value="s-fall" 	onChange={(e)=>toggleCheckBoxStatus(e,"s-fall")} />
-		       			 						<label htmlFor="fall">Fall</label>
-		       			 				</li>
-		       			 				<li>
-		       			 						<input type="checkbox" id="winter" value="s-winter" 	onChange={(e)=>toggleCheckBoxStatus(e,"s-winter")} />
-		       			 						<label htmlFor="winter">Winter</label>
-		       			 				</li>
-		       			 			</ul>
-		       			 		</div>
-		       			 </div>
-		       		</div>
-							<section className="tiles">
-									 { getList()}
-							</section>
-							<SideInfoSection handleLikeBtn={handleLikeBtn} likeList={likeList} cate={cate}/>
-						</div>
-
-						<div id="mobile-facetsearch">
-		       			 	<div className="filter-section-header">
-		       			 		<button onClick={()=>handleMobileClick("filter")}> 
-		       			 		<FontAwesomeIcon icon={faSliders} style={{ width: "20px"}} fade /> 
-		       			 		 </button>
-		       			 	</div>
-		       			
-		       			 	<div className="filter-section-header">
-		       			 		<button onClick={()=>handleMobileClick("about")}> 
-		       			 		<FontAwesomeIcon icon={faCircleInfo} style={{ width: "20px" }} fade /> 
-		       			 		</button>
-		       			 		</div>
-		        </div>	
+	return (
+	<div id="home">
+			<div className="home-content">
+			<Header/>
+			<div className="hero-image">
+				<img src="/images/home.png" alt="" />
+        <div className="hero-text">
+          <h1>Frustrated with finding out that kids' potential </h1>
+          <p>
+            We here to provide the development path for all kinds of activites and help you to get start the program searching. 
+          </p>
+          <button onClick={(e)=>handleLikeBtn(e)}>Explore Programs</button>
+        </div>
 			</div>
+			<div className="dp-content">
+				<h2>Development Pathway</h2>
 				
+            <p>
+                  Many children identify their interests and talents at a very young age, 
+          providing them with advantages 
+            <br/>that benefit their future lives and careers, 
+          unlike those who do not.
+            <br/>
+          Let's explore the available programs 
+          to understand the various development pathways . Avoid being   <br/>
+          uninformed parents  only consider the common activities like basketball, swimming, dancing and drawing, 
+                      <br/>
+                    Think like an expert in the fields, as there are countless other opportunities out there. 
+                </p>
+			</div>
+			</div>
+			<div className="home-list-program">
+				<div className="home-content">
+					<TabsComponent />
+					<button onClick={(e)=>handleLikeBtn(e)}>Explore More</button>
+				</div>
+			</div>
+			<div className="home-report">
+				<div className="home-content">
+				
+					<div className="left">
+
+						<p className="title">
+							Enhanced by AI technology, designed to address key questions from parents
+						</p>
+						<ul>
+							<li>
+							<img src="/images/icon-info.png"/>Offer a comprehensive overview and advantages of engaging in this activity.</li>
+							<li>
+							<img src="/images/icon-time.png"/>Guidelines on the ideal age to join this activity and steps for initiating participation.</li>
+							<li>
+							<img src="/images/icon-pathway.png"/>Present a roadmap for progressing from beginner to professional in this field.</li>
+							<li>
+							<img src="/images/icon-cost.png"/>Provide an estimation of the time and financial investment required for this activity.</li>
+				</ul>
+					</div>
+					<div className="right">
+							<img src="/images/pathway.png" alt="" />
+					</div>
+				</div>
+			</div>
+				<div className="form">
+							<iframe src="https://aa1536f2.sibforms.com/serve/MUIFAI2sb0Kb9d0YhmvLgVgAMnoYpgGaxi-INEy60vrf0dsWroXhKRpjT2LSlwkIWoUp6oxWOvVnZ_UToiQ4HOumxG1K5Fla67aQHxFudF2HcYcSAibX0v0gY-UM1giDo6qWUeTWBVawaCFBsQmYFG-grb1_5XFomGRT2XXoUN1hY1nI_OEgAVMVcN-90TC9yXtvXTTERUUdr3YX" frameborder="0" scrolling="auto" allowfullscreen ></iframe>
+				</div>
+				<div className="footer">
+					<Footer />
+			</div>
 		</div>
-  );
+			)
 }
