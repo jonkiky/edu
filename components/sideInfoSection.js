@@ -1,4 +1,4 @@
-import { useState,useEffect, useRef,createRef } from 'react';
+import { useState,useEffect, useRef,createRef,useContext } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image'; 
 import Link from 'next/link';
@@ -8,33 +8,36 @@ import { faHeart as faHeartReg} from '@fortawesome/free-regular-svg-icons'
 import Header from "../components/header";
 import {data} from "../config/search_cate";
 import 'react-select-search/style.css'
+import { customContext } from '../components/context'; 
 
-export default function SideInfoSection(handleLikeBtn, likeList,cate =[]) {
+
+export default function SideInfoSection(props) {
+
+
+	const {likeList, updateLiskList, handleLikeBtn} = useContext(customContext);
 
   const getLikedList =()=>{
   		let list = []
-		  for (var i = cate.length - 1; i >= 0; i--) {
-		  		let hrefLink = "/content/"+cate[i].name;
-		  		let img = "/images/"+cate[i].name.replace(/ /g, "_")+".png";
+		  for (var i = data.length - 1; i >= 0; i--) {
+		  		let hrefLink = "/content/"+data[i].name;
+		  		let img = "/images/"+data[i].name.replace(/ /g, "_")+".png";
 		  		let likeIcon = <FontAwesomeIcon icon={faHeartReg} />;
 		  		let isLiked = false;
-		  		if (likeList.includes(cate[i].name)) {
-				if(cate[i].ispublic){
+		  		if (likeList.includes(data[i].name)) {
 							  			list.push(
-							  				<div className="likedItem" key={"liked_"+cate[i].name}>
+							  				<div className="likedItem" key={"liked_"+data[i].name}>
 																<a href={hrefLink} target="_self" >
 																	<span className="likedItemImage">
 																	<img src={img} alt="" />
 																</span>
 																</a>
 																<div className="disListIcon">
-																	<button className="disLikeBtn" data-customproperty={cate[i].name} onClick={(e)=>handleLikeBtn(e)} >
+																	<button className="disLikeBtn" data-customproperty={data[i].name} onClick={(e)=>handleLikeBtn(e)} >
 																		<FontAwesomeIcon icon={faCircleXmark} />
 																	</button>
 																</div>
 												</div>);
 							  				
-							  		}
 						  		}
 
 					}

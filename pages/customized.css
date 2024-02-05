@@ -441,7 +441,7 @@ line-height: normal;
     height: 15px;
     background: transparent;
     border-radius: 7px;
-    padding-top: 4px;
+    margin: 2px 0;
     border: none;
     cursor: pointer;
 }

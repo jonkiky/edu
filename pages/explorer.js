@@ -1,45 +1,32 @@
-import { useState,useEffect, useRef,createRef } from 'react';
+import { useState,useEffect, useRef,createRef, useContext} from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image'; 
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSliders, faCircleInfo ,faHeart as faHeartSolid ,faCircleXmark } from '@fortawesome/free-solid-svg-icons'
-import { faHeart as faHeartReg} from '@fortawesome/free-regular-svg-icons'
+import { faSliders, faCircleInfo ,faHeart as faHeartSolid ,faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as faHeartReg} from '@fortawesome/free-regular-svg-icons';
+import SelectSearch from 'react-select-search';
+import 'react-select-search/style.css';
 import Header from "../components/header";
 import {data} from "../config/search_cate";
 import SideInfoSection from "../components/sideInfoSection"
-import SelectSearch from 'react-select-search';
-import 'react-select-search/style.css'
+import { customContext } from '../components/context'; 
+
 
 export default function Index() {
-	 // Use a check to determine if localStorage is available
-  const isLocalStorageAvailable = typeof localStorage !== 'undefined';
+
+  const {likeList, updateLiskList, handleLikeBtn} = useContext(customContext);
   const router = useRouter();
   const [cate, setCate] = useState([]);
   const [tags, setTags] = useState([]);
 	const [checkboxStatus, setCheckboxStatus] = useState(Array.from(22,() => false));
 	const [filterVisible, setFilterVisible] = useState(false);
-	const [likeList, setLikeList] = useState(() => {
-		if (isLocalStorageAvailable) {
-      const likeList = localStorage.getItem('likeList');
-    	return  likeList ? likeList.split(',') : [];
-    } else {
-      return []; // Fallback if localStorage is not available
-    }
-  });
 
-  const [likedItems, setLikedItems] = useState();
 
-	const updateLiskList =(newLikeList)=>{
-		if(isLocalStorageAvailable){
-   			localStorage.setItem('likeList', newLikeList);
-    }
-   setLikeList(newLikeList);
-	}
+	 useEffect(() => {
+	   setCate(filter(data,tags))
+	  }, [data,tags]);
 
-	useEffect(() => {
-   setCate(filter(data,tags))
-  }, [data,tags]);
 
  const handleMobileClick = (tag) => {
   	if(tag == "filter"){
@@ -127,47 +114,7 @@ export default function Index() {
 			setCate(filter(data,updatedTags))
   };
 
-	const handleLikeBtn=(e)=>{
-		const likedActive = e.currentTarget.dataset.customproperty;
-		let newLikeList = [...likeList];
-		if (!newLikeList.includes(likedActive)) {
-		  newLikeList.push(likedActive);
-		}else{
-			newLikeList=newLikeList.filter(item => item !== likedActive);
-		}
-		updateLiskList(newLikeList);
-	}
-
-
-  const getLikedList =()=>{
-  		let list = []
-		  for (var i = cate.length - 1; i >= 0; i--) {
-		  		let hrefLink = "/content/"+cate[i].name;
-		  		let img = "/images/"+cate[i].name.replace(/ /g, "_")+".png";
-		  		let likeIcon = <FontAwesomeIcon icon={faHeartReg} />;
-		  		let isLiked = false;
-		  		if (likeList.includes(cate[i].name)) {
-				if(cate[i].ispublic){
-							  			list.push(
-							  				<div className="likedItem" key={"liked_"+cate[i].name}>
-																<a href={hrefLink} target="_self" >
-																	<span className="likedItemImage">
-																	<img src={img} alt="" />
-																</span>
-																</a>
-																<div className="disListIcon">
-																	<button className="disLikeBtn" data-customproperty={cate[i].name} onClick={(e)=>handleLikeBtn(e)} >
-																		<FontAwesomeIcon icon={faCircleXmark} />
-																	</button>
-																</div>
-												</div>);
-							  				
-							  		}
-						  		}
-
-					}
-		  		return list;
-		  }
+	
 
   const getList =()=>{
   		let list = []
@@ -320,7 +267,7 @@ export default function Index() {
 							<section className="tiles">
 									 { getList()}
 							</section>
-							<SideInfoSection handleLikeBtn={handleLikeBtn} likeList={likeList} cate={cate}/>
+							<SideInfoSection />
 						</div>
 
 						<div id="mobile-facetsearch">

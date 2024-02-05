@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Header from "../../components/header";
 import Section from "../../components/section";
 import QueryBuilder from "../../components/questions";
-
+import SideInfoSection from "../../components/sideInfoSection"
 
 
 export default function page() {
@@ -13,15 +13,11 @@ export default function page() {
 const [data, setData] = useState([]);
 
   const router = useRouter();
-
-
 	const sport = router.query?.slug;
 
 		if(sport==""){
 	  	router.push('/404');
 	  }
-
-
 
   useEffect(() => {
   	if(sport){
@@ -30,13 +26,10 @@ const [data, setData] = useState([]);
     
   }, [sport]);
 
+
   const fetchContent = function(sport){
   	fetch('../../data/'+sport.replace(/ /g, '_')+'.json')
       .then((response) => {
-        if (!response.ok) {
-        	// no pre-define data,  will try realy time query
-         setData(askForAI(sport));
-        }
         return response.json();
       })
       .then((jsonData) => {
@@ -45,12 +38,6 @@ const [data, setData] = useState([]);
       .catch((error) => {
         setData(error);
       });
-  }
-
-  const askForAI = function (sport){
-	  const queries = QueryBuilder(sport);
-	  return buildContentFromRes(queries)
-	 
   }
 
   const localContent = function(jsonData){
@@ -82,30 +69,12 @@ const [data, setData] = useState([]);
 
 	<div id="search-page">
 			<div className="search-paper">
-				 	<Header />
+				 	<Header link={"/explorer"}/>
 				 	<div className="trend-list">
 			      <div className="inner" id="content-sections">
 									{data}
 						</div>
-						 <div id="ads">
-									<h2 className="side-title">Development Pathways</h2>
-									<p>Embark on a journey of growth and discovery with Bright Futures Pathways,
-									 where every child's potential is limitless. 
-									 Our platform is dedicated to guiding and nurturing 
-									 young minds through their developmental stages. 
-									 We believe in creating a world where kids can
-									  explore, learn, and thrive at their own pace.</p>
-									<ul>
-										<li>	<Link href="/about">About Us</Link></li>
-										<li>	<Link href="/use">Terms of Service</Link></li>
-										<li>	<Link href="/policy">Privacy Policy</Link></li>
-									</ul>
-
-									<div className="line"></div>
-									<br/>
-									<Link href="/explorer" className="back-btn">Back to program list</Link>
-									<br/>
-								</div>
+						<SideInfoSection redirect={"/explorer"}/>
 					</div>
 			</div>
 		</div>

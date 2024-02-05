@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import ContextProvider from '../components/context'; 
 import { initGA, logPageView } from '../components/analytics';
 import './customized.css';
 import './main.css';
@@ -41,9 +42,11 @@ const App = ({ Component, pageProps }) => {
         KIDDIE DISCOVERY
        </title>
       </Head>
-      <div className="wrapper">
-        <Component {...pageProps} />
-      </div>
+      <ContextProvider>
+        <div className="wrapper">
+          <Component {...pageProps} />
+        </div>
+      </ContextProvider>
       </>
 
   );
