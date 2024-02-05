@@ -62,7 +62,7 @@ export default function SideInfoSection(props) {
 								<div className="line"></div>
 								<br/>
 								<div className="collection">
-									<p> Collection </p>
+									<p> Your Likes Collection </p>
 										<div className="collected-items">
 											{getLikedList()}
 										</div>
