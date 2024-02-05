@@ -1,10 +1,8 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react';
-import { InfinitySpin } from 'react-loader-spinner';
 import Link from 'next/link';
 import Header from "../../components/header";
 import Section from "../../components/section";
-import QueryBuilder from "../../components/questions";
 import SideInfoSection from "../../components/sideInfoSection"
 
 
@@ -14,7 +12,6 @@ const [data, setData] = useState([]);
 
   const router = useRouter();
 	const sport = router.query?.slug;
-
 		if(sport==""){
 	  	router.push('/404');
 	  }

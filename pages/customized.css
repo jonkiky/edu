@@ -667,6 +667,9 @@ line-height: normal;
     margin: 10px;
 }
 
+button{
+	cursor: pointer;
+}
 .hero-text button{
     background: black;
     color: white;

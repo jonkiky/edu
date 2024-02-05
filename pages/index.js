@@ -22,33 +22,33 @@ const TabsComponent = ()=> (
         
 			<article class="style1">
 				<span class="image">
-					<img src="/images/Basketball.png" alt="" />
+					<img src="/images/Gymnastics.png" alt="" />
 				</span>
-				<a href="/content/Basketball" target="_self">
+				<a href="/content/Gymnastics" target="_self">
 			        <div class="content"></div>
 			    </a>
 			</article>
 			<article class="style1">
 				<span class="image">
-					<img src="/images/Basketball.png" alt="" />
+					<img src="/images/Archery.png" alt="" />
 				</span>
-				<a href="/content/Basketball" target="_self">
+				<a href="/content/Archery" target="_self">
 			        <div class="content"></div>
 			    </a>
 			</article>
 			<article class="style1">
 				<span class="image">
-					<img src="/images/Basketball.png" alt="" />
+					<img src="/images/Golf.png" alt="" />
 				</span>
-				<a href="/content/Basketball" target="_self">
+				<a href="/content/Golf" target="_self">
 			        <div class="content"></div>
 			    </a>
 			</article>
 			<article class="style1">
 				<span class="image">
-					<img src="/images/Basketball.png" alt="" />
+					<img src="/images/Fencing.png" alt="" />
 				</span>
-				<a href="/content/Basketball" target="_self">
+				<a href="/content/Fencing" target="_self">
 			        <div class="content"></div>
 			    </a>
 			</article>
@@ -59,33 +59,33 @@ const TabsComponent = ()=> (
         
 			<article class="style1">
 				<span class="image">
-					<img src="/images/Basketball.png" alt="" />
+					<img src="/images/Film_Maker.png" alt="" />
 				</span>
-				<a href="/content/Basketball" target="_self">
+				<a href="/content/Film Maker" target="_self">
 			        <div class="content"></div>
 			    </a>
 			</article>
 			<article class="style1">
 				<span class="image">
-					<img src="/images/Basketball.png" alt="" />
+					<img src="/images/Photographer.png" alt="" />
 				</span>
-				<a href="/content/Basketball" target="_self">
+				<a href="/content/Photographer" target="_self">
 			        <div class="content"></div>
 			    </a>
 			</article>
 			<article class="style1">
 				<span class="image">
-					<img src="/images/Basketball.png" alt="" />
+					<img src="/images/Photographer.png" alt="" />
 				</span>
-				<a href="/content/Basketball" target="_self">
+				<a href="/content/Photographer" target="_self">
 			        <div class="content"></div>
 			    </a>
 			</article>
 			<article class="style1">
 				<span class="image">
-					<img src="/images/Basketball.png" alt="" />
+					<img src="/images/Photographer.png" alt="" />
 				</span>
-				<a href="/content/Basketball" target="_self">
+				<a href="/content/Photographer" target="_self">
 			        <div class="content"></div>
 			    </a>
 			</article>
@@ -96,9 +96,9 @@ const TabsComponent = ()=> (
         
 			<article class="style1">
 				<span class="image">
-					<img src="/images/Basketball.png" alt="" />
+					<img src="/images/Accordion.png" alt="" />
 				</span>
-				<a href="/content/Basketball" target="_self">
+				<a href="/content/Accordion" target="_self">
 			        <div class="content"></div>
 			    </a>
 			</article>
