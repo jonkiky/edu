@@ -19,7 +19,7 @@ export const data = [
         "tags": [
            "age-6", "age-7","age-8", "age-9", 
          "s-spring","s-summer", "s-fall","s-winter",
-           "c-$$",
+           "c-$",
         "mi-methematical"],
         "cate":  "mi-methematical"
     },
@@ -30,7 +30,7 @@ export const data = [
         "tags": [
         "age-5","age-6", "age-7","age-8", "age-9", 
          "s-spring","s-summer", "s-fall","s-winter",
-           "c-$$",
+           "c-$",
         "mi-methematical"],
         "cate":  "mi-methematical"
     },

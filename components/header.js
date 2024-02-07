@@ -7,19 +7,33 @@ import 'react-select-search/style.css'
 export default function Header(props) {
 
 const options = [
-	{ name: "Swimming",value:"Swimming"},
-	{ name: "Taekwondo",value:"Taekwondo"},
-	{ name: "Street Dance",value:"Street Dance"},
-	{ name: "Photographer",value:"Photographer"},
-	{ name: "Karate",value:"Karate"},
-	{ name: "Gymnastics",value:"Gymnastics"},
-	{ name: "Karate",value:"Karate"},
-	{ name: "Golf",value:"Golf"},
-	{ name: "Beauty Pageant",value:"Beauty Pageant"},
-	{ name: "Basketball",value:"Basketball"},
-	{ name: "Ballet",value:"Ballet"},
-	{ name: "Archery",value:"Archery"},
-	{ name: "Accordion",value:"Accordion"}
+	{name: "Mathematical Olympiad", value: "Mathematical Olympiad"},
+	{name: "Computing_Olympiad", value: "Computing_Olympiad"},
+	{name: "Go", value: "Go"},
+	{name: "Chess", value: "Chess"},
+	{name: "Poker", value: "Poker"},
+	{name: "Ukulele", value: "Ukulele"},
+	{name: "Jazz Dance", value: "Jazz Dance"},
+	{name: "Painting", value: "Painting"},
+	{name: "Jewelry Maker", value: "Jewelry Maker"},
+	{name: "Cooking", value: "Cooking"},
+	{name: "Drawing", value: "Drawing"},
+	{name: "American Football", value: "American Football"},
+	{name:"Accordion", value:"Accordion"},
+	{name: "Archery", value: "Archery"},
+	{name: "Ballet", value: "Ballet"},
+	{name: "Basketball", value: "Basketball"},
+	{name: "Beauty Pageant", value: "Beauty Pageant"},
+	{name: "Fencing", value: "Fencing"},
+	{name: "Film Maker", value: "Film Maker"},
+	{name: "Formula 1 Racing", value: "Formula 1 Racing"},
+	{name: "Golf", value: "Golf"},
+	{name: "Gymnastics", value: "Gymnastics"},
+	{name: "Karate", value: "Karate"},
+	{name: "Photographer", value: "Photographer"},
+	{name: "Street Dance", value: "Street Dance"},
+	{name: "Taekwondo", value: "Taekwondo"},
+	{name: "Swimming", value: "Swimming"}
 ];
 const link = props.link?  props.link :"/";
 const router = useRouter();
