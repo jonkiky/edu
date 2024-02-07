@@ -12,6 +12,138 @@ const tags =[
     "s-spring", "s-summer", "s-fall","s-winter", "c-$"]
 
 export const data = [
+     {
+        "name": "Mathematical Olympiad",
+        "desc": "",
+        "age":6,
+        "tags": [
+           "age-6", "age-7","age-8", "age-9", 
+         "s-spring","s-summer", "s-fall","s-winter",
+           "c-$$",
+        "mi-methematical"],
+        "cate":  "mi-methematical"
+    },
+    {
+        "name": "Computing_Olympiad",
+        "desc": "",
+        "age":5,
+        "tags": [
+        "age-5","age-6", "age-7","age-8", "age-9", 
+         "s-spring","s-summer", "s-fall","s-winter",
+           "c-$$",
+        "mi-methematical"],
+        "cate":  "mi-methematical"
+    },
+    {
+        "name": "Go",
+        "desc": "",
+        "age":5,
+        "tags": [
+           "age-5","age-6", "age-7","age-8", "age-9", 
+         "s-spring","s-summer", "s-fall","s-winter",
+           "c-$",
+        "mi-methematical"],
+        "cate":  "mi-methematical"
+    },
+    {
+        "name": "Chess",
+        "desc": "",
+        "age":6,
+        "tags": [
+           "age-6", "age-7","age-8", "age-9", 
+         "s-spring","s-summer", "s-fall","s-winter",
+           "c-$",
+        "mi-methematical"],
+        "cate":  "mi-methematical"
+    },
+    {
+        "name": "Poker",
+        "desc": "",
+        "age": 6,
+        "tags": [
+          "age-6", "age-7","age-8", "age-9", 
+         "s-spring","s-summer", "s-fall","s-winter",
+           "c-$",
+         "mi-methematical"],
+        "cate":  "mi-methematical"
+    },
+     {
+        "name": "Ukulele",
+        "desc": "",
+        "age":3,
+        "tags": [
+           "age-3", "age-4","age-5","age-6", "age-7","age-8", "age-9", 
+         "s-spring","s-summer", "s-fall","s-winter",
+           "c-$$",
+         "mi-musical","mi-intrapersonal","mi-linguistic"],
+        "cate":  "mi-musical"
+    },
+     {
+        "name": "Jazz Dance",
+        "desc": "",
+         "age":5,
+        "tags": [
+           "age-5","age-6","age-7", "age-8", "age-9", 
+            "s-spring", "s-summer", "s-fall","s-winter",
+           "c-$",
+         "mi-visual",],
+        "cate":  "mi-visual"
+    },
+     {
+        "name": "Painting",
+        "desc": "",
+        "age":4,
+        "tags": [
+           "age-4","age-5","age-6","age-7", "age-8", "age-9", 
+            "s-spring", "s-summer", "s-fall","s-winter",
+           "c-$",
+         "mi-visual",],
+        "cate":  "mi-visual"
+    },
+     {
+        "name": "Jewelry Maker",
+        "desc": "",
+        "age":5,
+        "tags": [
+           "age-5","age-6","age-7", "age-8", "age-9", 
+          "s-spring", "s-summer", "s-fall","s-winter",
+           "c-$",
+          "mi-visual",],
+        "cate":  "mi-visual"
+    },
+    {
+        "name": "Cooking",
+        "desc": "",
+        "age":5,
+        "tags": [
+            "age-5","age-6","age-7", "age-8", "age-9", 
+           "s-spring", "s-summer", "s-fall","s-winter",
+           "c-$",
+           "mi-visual"],
+        "cate":  "mi-visual"
+    },
+     {
+        "name": "Drawing",
+        "desc": "",
+        "age":3,
+        "tags": [
+             "age-3","age-4","age-5","age-6","age-7", "age-8", "age-9", 
+           "s-spring", "s-summer", "s-fall","s-winter",
+           "c-$",
+           "mi-visual"],
+        "cate":  "mi-visual"
+    },
+    {
+        "name": "American Football",
+        "desc": "",
+        "age":5,
+        "tags": [
+        "age-5","age-6","age-7", "age-8", "age-9", 
+        "s-fall",
+           "c-$",
+         "mi-bodily-kinesthetic", ],
+        "cate":   "mi-bodily-kinesthetic",
+    },
     {
         "name":"Accordion",
         "desc": "",
